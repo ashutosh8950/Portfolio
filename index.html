@@ -664,6 +664,18 @@
       font-size: 0.7rem;
     }
 
+    .exp-badge { display: inline-block; margin-top: 0.5rem; font-size: 0.68rem; color: #00E5FF; background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25); border-radius: 20px; padding: 0.15rem 0.6rem; letter-spacing: 0.04em; font-family: var(--mono); }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
+    .exp-role { color: var(--cyan); font-family: var(--display); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.15rem; }
+    .exp-company { font-size: 1.05rem; margin-bottom: 0 !important; }
+    .exp-location { font-size: 0.75rem; color: var(--muted); font-family: var(--mono); background: rgba(99,179,237,0.07); border: 1px solid var(--border); border-radius: 6px; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .exp-tag { font-size: 0.7rem; font-family: var(--mono); color: var(--cyan); background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.15); border-radius: 4px; padding: 0.2rem 0.55rem; letter-spacing: 0.03em; }
+    .project-highlights strong { color: var(--white); font-weight: 600; }
+    body.light-mode .exp-badge { background: rgba(0,180,200,0.08); }
+    body.light-mode .exp-tag { background: rgba(0,180,200,0.06); }
+    body.light-mode .exp-location { background: rgba(0,180,200,0.05); }
+
     .project-footer {
       padding: 1.2rem 2rem;
       border-top: 1px solid var(--border);
@@ -963,10 +975,42 @@
     #now, #proof { background: rgba(5,10,20,0.78); }
     #journey { background: rgba(10,16,32,0.82); }
     .now-grid, .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 3rem; }
+    .proof-grid { align-items: start; }
     .now-card, .proof-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; }
+    .proof-card { height: 100%; box-sizing: border-box; }
     .now-card h3, .proof-card h3 { color: var(--white); font-family: var(--display); font-size: 1rem; margin-bottom: 0.7rem; }
     .now-card p, .proof-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
     .github-graph { margin-top: 1.2rem; width: 100%; max-width: 760px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); padding: 0.5rem; }
+    .proof-card { transition: border-color 0.3s ease, transform 0.3s ease; }
+    .proof-card:hover { border-color: rgba(0,229,255,0.35); transform: translateY(-3px); }
+    .gh-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem; }
+    .gh-stat { background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.12); border-radius: 8px; padding: 0.6rem 0.8rem; }
+    .gh-stat-val { color: var(--cyan, #00E5FF); font-size: 1.2rem; font-weight: 800; display: block; }
+    .gh-stat-lbl { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .gh-graph-wrap { border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem; background: rgba(0,0,0,0.2); overflow: hidden; }
+    .gh-graph-wrap img { width: 100%; border-radius: 6px; display: block; filter: brightness(2.2) contrast(1.5) saturate(1.8) !important; }
+    .rec-list { display: flex; flex-direction: column; gap: 0.6rem; padding-right: 0.25rem; }
+    .rec-item { border-left: 2px solid rgba(0,229,255,0.4); padding-left: 0.85rem; }
+    .rec-quote { color: var(--white); font-size: 0.78rem; line-height: 1.55; font-style: italic; margin-bottom: 0.3rem; opacity: 0.75; }
+    .rec-author { display: flex; align-items: center; gap: 0.5rem; }
+    .rec-avatar { width: 26px; height: 26px; border-radius: 50%; background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25); display: flex; align-items: center; justify-content: center; color: var(--cyan, #00E5FF); font-size: 0.6rem; font-weight: 700; flex-shrink: 0; }
+    .rec-name { color: var(--white); font-size: 0.72rem; font-weight: 600; opacity: 0.85; }
+    .rec-role { color: var(--muted); font-size: 0.68rem; }
+    .rec-coming { display: flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.72rem; margin-top: 0.6rem; border-top: 1px solid var(--border); padding-top: 0.6rem; }
+    .rec-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,229,255,0.3); display: inline-block; flex-shrink: 0; }
+    .writing-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .writing-item { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.65rem; border-radius: 8px; border: 1px solid var(--border); background: rgba(0,229,255,0.03); transition: border-color 0.3s ease, background 0.3s ease; cursor: pointer; }
+    .writing-item:hover { border-color: rgba(0,229,255,0.2); background: rgba(0,229,255,0.07); }
+    .writing-icon { color: var(--cyan, #00E5FF); font-size: 0.9rem; margin-top: 2px; flex-shrink: 0; }
+    .writing-title { color: var(--white); font-size: 0.78rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.2rem; opacity: 0.85; }
+    .writing-meta { color: var(--muted); font-size: 0.68rem; }
+    .writing-arrow { color: rgba(0,229,255,0.4); margin-left: auto; flex-shrink: 0; align-self: center; }
+    .writing-cta { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border); text-align: right; }
+    .writing-cta a { color: var(--cyan, #00E5FF); font-size: 0.75rem; text-decoration: none; letter-spacing: 0.04em; }
+    .writing-cta a:hover { text-decoration: underline; }
+    body.light-mode .gh-stat { background: rgba(0,180,200,0.06); }
+    body.light-mode .rec-quote { color: var(--white); }
+    body.light-mode .writing-item { background: rgba(0,180,200,0.03); }
     .timeline { margin-top: 3.5rem; display: grid; gap: 1rem; }
     .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; transition: all 0.25s ease; }
     .timeline-item:hover { transform: translateX(6px); border-color: var(--cyan); }
@@ -1445,15 +1489,38 @@ Open to Applied ML / Computer Vision / AI Engineer roles
 
       <div class="timeline">
         <div class="timeline-item reveal reveal-delay-1">
-          <div class="timeline-year">June 2026 - Present</div>
+          <div class="timeline-year">
+            June 2026 &ndash; Present
+            <span class="exp-badge">&bull; Live</span>
+          </div>
           <div>
-            <div class="timeline-title">AI Trainee — Virves Software Solutions</div>
-            <div class="timeline-text">Remote</div>
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">AI Trainee</div>
+                <div class="timeline-title exp-company">Virves Software Solutions</div>
+              </div>
+              <div class="exp-location">Remote</div>
+            </div>
             <ul class="project-highlights">
-              <li>Developed a FastAPI-based OCR validation backend for Aadhaar, PAN Card, and Driving License documents using EasyOCR, image preprocessing, and rule-based decision logic.</li>
-              <li>Built document-number extraction, PAN holder-name extraction, strict profile-name matching, and cross-document mismatch detection from noisy OCR text.</li>
-              <li>Improved OCR pipeline reliability and runtime using staged preprocessing, image resizing, candidate deduplication, and early-exit optimization while maintaining a fully passing 139+ unit test suite.</li>
+              <li>Built a <strong>FastAPI-based OCR validation backend</strong> for
+                  Aadhaar, PAN Card, and Driving License documents &mdash; handling
+                  extraction, name matching, and cross-document mismatch detection
+                  from noisy real-world scans.</li>
+              <li>Engineered a staged preprocessing pipeline with image resizing,
+                  candidate deduplication, and early-exit logic &mdash; cutting runtime
+                  while keeping a <strong>fully passing 139+ unit test suite</strong>.</li>
+              <li>Delivered production-ready reliability on document intelligence
+                  with <strong>EasyOCR + rule-based decision logic</strong> &mdash;
+                  zero regressions across all validation scenarios.</li>
             </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">Python</span>
+              <span class="exp-tag">FastAPI</span>
+              <span class="exp-tag">EasyOCR</span>
+              <span class="exp-tag">OCR Pipelines</span>
+              <span class="exp-tag">Unit Testing</span>
+              <span class="exp-tag">REST API</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1844,19 +1911,106 @@ Open to Applied ML / Computer Vision / AI Engineer roles
       <div class="section-eyebrow reveal">Proof of Work</div>
       <h2 class="section-title reveal">Consistency, code, and credibility.</h2>
       <div class="proof-grid">
+
+        <!-- Card 1: GitHub Activity -->
         <div class="proof-card reveal reveal-delay-1">
           <h3>GitHub Activity</h3>
-          <p>Live contribution graph for a quick view of coding consistency.</p>
-          <img class="github-graph" src="https://ghchart.rshah.org/00E5FF/ashutosh8950" alt="Ashutosh Gupta GitHub contribution graph" loading="lazy" />
+          <p>17 repos, 6 real-world AI/ML projects — built and shipped.</p>
+          <div class="gh-stats">
+            <div class="gh-stat"><span class="gh-stat-val">200+</span><span class="gh-stat-lbl">Contributions</span></div>
+            <div class="gh-stat"><span class="gh-stat-val">17</span><span class="gh-stat-lbl">Repos</span></div>
+            <div class="gh-stat"><span class="gh-stat-val">11</span><span class="gh-stat-lbl">Stars Earned</span></div>
+            <div class="gh-stat"><span class="gh-stat-val">6</span><span class="gh-stat-lbl">Projects Built</span></div>
+          </div>
+          <div class="gh-graph-wrap">
+            <img class="github-graph"
+                 src="https://ghchart.rshah.org/00E5FF/ashutosh8950"
+                 alt="Ashutosh Gupta GitHub contribution graph"
+                 loading="lazy" />
+          </div>
         </div>
+
+        <!-- Card 2: Recommendations -->
         <div class="proof-card reveal reveal-delay-2">
           <h3>Recommendations</h3>
-          <p>Add 2–3 verified professor, mentor, or teammate testimonials here once available. I have kept this section ready without inventing quotes.</p>
+          <p>What friends who&rsquo;ve seen the full journey say.</p>
+          <div class="rec-list">
+
+            <div class="rec-item">
+              <p class="rec-quote">&ldquo;He won&rsquo;t move on until he truly understands it. While we were okay with things working, Ashutosh was three layers deep into why. That obsession shows in everything he builds.&rdquo;</p>
+              <div class="rec-author">
+                <div class="rec-avatar">PK</div>
+                <div>
+                  <div class="rec-name">Pankaj</div>
+                  <div class="rec-role">B.Tech CSE &middot; Batchmate since Year 1</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rec-item">
+              <p class="rec-quote">&ldquo;Four years and I&rsquo;ve never seen him stop. He&rsquo;s always onto the next thing in ML before anyone else even hears about it. The certifications are proof of what he was already doing anyway.&rdquo;</p>
+              <div class="rec-author">
+                <div class="rec-avatar">AT</div>
+                <div>
+                  <div class="rec-name">Aditya Tejpal</div>
+                  <div class="rec-role">B.Tech CSE &middot; Batchmate since Year 1</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rec-item">
+              <p class="rec-quote">&ldquo;He goes from idea to working model faster than anyone I know. Most people sit on ideas &mdash; Ashutosh ships them.&rdquo;</p>
+              <div class="rec-author">
+                <div class="rec-avatar">MG</div>
+                <div>
+                  <div class="rec-name">Mitush Gupta</div>
+                  <div class="rec-role">B.Tech CSE &middot; Batchmate since Year 2</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rec-coming"><span class="rec-dot"></span> LinkedIn recommendations coming soon</div>
+
+          </div>
         </div>
+
+        <!-- Card 3: Writing -->
         <div class="proof-card reveal reveal-delay-3">
           <h3>Writing</h3>
-          <p>Use this space for blog links such as “How I deployed my first ML app” or “Lessons from building a fraud detector”.</p>
+          <p>Thoughts on ML, failure, and what actually sticks.</p>
+          <div class="writing-list">
+
+            <div class="writing-item">
+              <span class="writing-icon">&#10022;</span>
+              <div>
+                <div class="writing-title">I spent 6 months on Kaggle before I understood what a model actually learns</div>
+                <div class="writing-meta">Coming soon &middot; Machine Learning &middot; 6 min read</div>
+              </div>
+              <span class="writing-arrow">&rarr;</span>
+            </div>
+
+            <div class="writing-item">
+              <span class="writing-icon">&#10022;</span>
+              <div>
+                <div class="writing-title">The ML project that broke 3 times before it worked &mdash; and what each failure taught me</div>
+                <div class="writing-meta">Coming soon &middot; Data Science &middot; 7 min read</div>
+              </div>
+              <span class="writing-arrow">&rarr;</span>
+            </div>
+
+            <div class="writing-item">
+              <span class="writing-icon">&#10022;</span>
+              <div>
+                <div class="writing-title">What Coursera doesn&rsquo;t teach you &mdash; the messy middle between learning and building</div>
+                <div class="writing-meta">Coming soon &middot; Career &middot; 5 min read</div>
+              </div>
+              <span class="writing-arrow">&rarr;</span>
+            </div>
+
+          </div>
+          <div class="writing-cta"><a href="#">View all posts &rarr;</a></div>
         </div>
+
       </div>
     </div>
   </section>
