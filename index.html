@@ -669,6 +669,8 @@
     .exp-role { color: var(--cyan); font-family: var(--display); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.15rem; }
     .exp-company { font-size: 1.05rem; margin-bottom: 0 !important; }
     .exp-location { font-size: 0.75rem; color: var(--muted); font-family: var(--mono); background: rgba(99,179,237,0.07); border: 1px solid var(--border); border-radius: 6px; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    .exp-location a { color: var(--cyan); text-decoration: none; }
+    .exp-location a:hover { text-decoration: underline; }
     .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
     .exp-tag { font-size: 0.7rem; font-family: var(--mono); color: var(--cyan); background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.15); border-radius: 4px; padding: 0.2rem 0.55rem; letter-spacing: 0.03em; }
     .project-highlights strong { color: var(--white); font-weight: 600; }
@@ -1286,9 +1288,9 @@
     }
   </style>
 </head>
-<body class="is-loading">
+<body>
 
-  <a href="#projects" class="skip-link">Skip to projects</a>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- BACKGROUND CANVAS -->
   <canvas id="bgCanvas"></canvas>
@@ -1305,6 +1307,7 @@
     <a href="#hero" class="nav-logo">AG<span>.</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#now">Now</a></li>
@@ -1322,6 +1325,7 @@
   </nav>
 
   <!-- HERO -->
+  <main id="main">
   <section id="hero">
     <div class="hero-grid"></div>
     <div class="blob blob-1"></div>
@@ -1485,13 +1489,13 @@ Open to Applied ML / Computer Vision / AI Engineer roles
     <div class="container">
       <div class="section-eyebrow reveal">Experience</div>
       <h2 class="section-title reveal">Applied AI in live workflows.</h2>
-      <p class="section-sub reveal">Current hands-on work across OCR pipelines, backend validation, and production-style reliability.</p>
+      <p class="section-sub reveal">Hands-on work across OCR pipelines, backend validation, and production-style reliability.</p>
 
       <div class="timeline">
         <div class="timeline-item reveal reveal-delay-1">
           <div class="timeline-year">
-            June 2026 &ndash; Present
-            <span class="exp-badge">&bull; Live</span>
+            June 2026 &ndash; September 2026
+            <span class="exp-badge">&bull; Completed</span>
           </div>
           <div>
             <div class="exp-header">
@@ -1499,19 +1503,20 @@ Open to Applied ML / Computer Vision / AI Engineer roles
                 <div class="exp-role">AI Trainee</div>
                 <div class="timeline-title exp-company">Virves Software Solutions</div>
               </div>
-              <div class="exp-location">Remote</div>
+              <div class="exp-location">Remote &middot; <a href="https://drive.google.com/file/d/1zNPHZZxacrnLfct-giRjf3FjCipIOEo_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="View Virves Software Solutions internship certificate">Certificate</a></div>
             </div>
             <ul class="project-highlights">
-              <li>Engineered a <strong>FastAPI Multi-Document Validator</strong> for Aadhaar, PAN Card, and Driving License verification using <strong>EasyOCR, OpenCV, and deterministic rule-based validation</strong>.</li>
-              <li>Implemented OCR extraction, document validation, applicant name matching, confidence scoring, REST APIs, and <strong>SQLite-backed persistence</strong> for an automated document verification workflow.</li>
-              <li>Optimized the OCR pipeline through advanced image preprocessing, candidate pruning, and early-exit strategies while maintaining <strong>426 automated tests</strong> and producing technical documentation and performance benchmarking reports.</li>
+              <li>Engineered a <strong>FastAPI backend</strong> to validate Aadhaar, PAN Card, and Driving License uploads using <strong>EasyOCR, OpenCV, and explainable rule-based scoring</strong> with ACCEPTED, REJECTED, REUPLOAD_REQUIRED, and MANUAL_REVIEW outcomes.</li>
+              <li>Implemented OCR extraction, document-specific number and identity-field parsing, PAN holder-name matching, confidence scoring, applicant tracking, manual-review approval/rejection APIs, and <strong>MongoDB/GridFS persistence</strong>.</li>
+              <li>Optimized CPU-bound OCR through staged candidate generation, image resizing, rotation/crop deduplication, targeted field OCR, bounded PAN OCR budgets, and high-confidence early-exit strategies; added automated tests, benchmarks, and technical documentation.</li>
             </ul>
             <div class="exp-tags">
               <span class="exp-tag">Python</span>
               <span class="exp-tag">FastAPI</span>
               <span class="exp-tag">EasyOCR</span>
               <span class="exp-tag">OpenCV</span>
-              <span class="exp-tag">SQLite</span>
+              <span class="exp-tag">MongoDB</span>
+              <span class="exp-tag">GridFS</span>
               <span class="exp-tag">REST API</span>
               <span class="exp-tag">Unit Testing</span>
             </div>
@@ -1538,7 +1543,6 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="skill-pill">C++</span>
             <span class="skill-pill">SQL</span>
             <span class="skill-pill">R</span>
-            <span class="skill-pill">JavaScript</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-2">
@@ -1549,8 +1553,14 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="skill-pill">OCR Pipelines</span>
             <span class="skill-pill">Image Preprocessing</span>
             <span class="skill-pill">Document Image Analysis</span>
+            <span class="skill-pill">Rule-based Scoring</span>
+            <span class="skill-pill">Name Matching</span>
+            <span class="skill-pill">Image Quality Assessment</span>
             <span class="skill-pill">OpenCV</span>
-            <span class="skill-pill">PyPDF2</span>
+            <span class="skill-pill">Tesseract</span>
+            <span class="skill-pill">PyMuPDF</span>
+            <span class="skill-pill">Pillow</span>
+            <span class="skill-pill">NumPy</span>
           </div>
         </div>
         <div class="skill-card reveal reveal-delay-3">
@@ -1571,9 +1581,13 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           <div class="skill-card-name">Backend & APIs</div>
           <div class="skill-pills">
             <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">Uvicorn</span>
+            <span class="skill-pill">Pydantic</span>
             <span class="skill-pill">Flask</span>
             <span class="skill-pill">REST APIs</span>
-            <span class="skill-pill">SQLite</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">GridFS</span>
+            <span class="skill-pill">PyMongo</span>
             <span class="skill-pill">Streamlit</span>
           </div>
         </div>
@@ -1598,15 +1612,21 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="skill-pill">Render</span>
             <span class="skill-pill">Postman</span>
             <span class="skill-pill">VS Code</span>
-            <span class="skill-pill">Jupyter</span>
+            <span class="skill-pill">Visual Studio</span>
+            <span class="skill-pill">Jupyter Notebook</span>
+            <span class="skill-pill">pytest</span>
+            <span class="skill-pill">API Key Authentication</span>
+            <span class="skill-pill">Rate Limiting</span>
+            <span class="skill-pill">Automated Testing</span>
+            <span class="skill-pill">Performance Optimization</span>
           </div>
         </div>
       </div>
 
       <div class="stack-marquee reveal reveal-delay-2" aria-label="Technology stack marquee">
         <div class="marquee-track">
-          <span class="logo-pill">🐍 Python</span><span class="logo-pill">📄 EasyOCR</span><span class="logo-pill">👁️ OpenCV</span><span class="logo-pill">🧠 spaCy</span><span class="logo-pill">⚡ FastAPI</span><span class="logo-pill">🔥 PyTorch</span><span class="logo-pill">📊 Scikit-learn</span><span class="logo-pill">🐳 Docker</span><span class="logo-pill">🚀 Render</span>
-          <span class="logo-pill">🐍 Python</span><span class="logo-pill">📄 EasyOCR</span><span class="logo-pill">👁️ OpenCV</span><span class="logo-pill">🧠 spaCy</span><span class="logo-pill">⚡ FastAPI</span><span class="logo-pill">🔥 PyTorch</span><span class="logo-pill">📊 Scikit-learn</span><span class="logo-pill">🐳 Docker</span><span class="logo-pill">🚀 Render</span>
+          <span class="logo-pill">🐍 Python</span><span class="logo-pill">📄 EasyOCR</span><span class="logo-pill">👁️ OpenCV</span><span class="logo-pill">🧩 Pydantic</span><span class="logo-pill">⚡ FastAPI</span><span class="logo-pill">🍃 MongoDB</span><span class="logo-pill">🗂️ GridFS</span><span class="logo-pill">🐳 Docker</span><span class="logo-pill">🧪 pytest</span>
+          <span class="logo-pill">🐍 Python</span><span class="logo-pill">📄 EasyOCR</span><span class="logo-pill">👁️ OpenCV</span><span class="logo-pill">🧩 Pydantic</span><span class="logo-pill">⚡ FastAPI</span><span class="logo-pill">🍃 MongoDB</span><span class="logo-pill">🗂️ GridFS</span><span class="logo-pill">🐳 Docker</span><span class="logo-pill">🧪 pytest</span>
         </div>
       </div>
     </div>
@@ -1638,7 +1658,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
           <div class="project-body">
             <div class="project-badge">🟢 Live on Render</div>
-            <div class="project-name">Resume Screener</div>
+            <h3 class="project-name">Resume Screener</h3>
             <p class="project-desc">AI-powered resume ↔ job description matcher with GPT-3.5 improvement suggestions and interactive analytics dashboard.</p>
             <ul class="project-highlights">
               <li>TF-IDF + Word2Vec + keyword overlap weighted ensemble matching</li>
@@ -1649,7 +1669,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <div class="project-actions">
               <a href="https://ai-resume-screener-w6h3.onrender.com" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open live demo for Resume Screener">🟢 Live Demo</a>
               <a href="https://github.com/ashutosh8950/ai-resume-screener" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open GitHub repository for Resume Screener">💻 GitHub</a>
-              <a href="#contact" class="project-action">📝 Case Study</a>
+              <a href="#contact" class="project-action">💬 Discuss Project</a>
             </div>
           </div>
           <div class="project-footer">
@@ -1680,7 +1700,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
           <div class="project-body">
             <div class="project-badge">🟢 Live on Render</div>
-            <div class="project-name">TruthScan — Fake News Detector</div>
+            <h3 class="project-name">TruthScan — Fake News Detector</h3>
             <p class="project-desc">Production-grade fake news detection system with fine-tuned DistilBERT (99.97% accuracy) and 6-model ML ensemble (98.5% accuracy), deployed with CI/CD pipeline and cyberpunk dark-mode frontend.</p>
             <ul class="project-highlights">
               <li>Fine-tuned DistilBERT transformer on 44K articles achieving 99.97% accuracy, hosted on Hugging Face</li>
@@ -1723,7 +1743,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
           <div class="project-body">
             <div class="project-badge">🟢 Live on Render</div>
-            <div class="project-name">ShieldAI Fraud Detection</div>
+            <h3 class="project-name">ShieldAI Fraud Detection</h3>
             <p class="project-desc">Real-time transaction fraud detection with 97%+ accuracy, live dashboard with KPIs, and auto-severity alerts.</p>
             <ul class="project-highlights">
               <li>Random Forest on 10K transactions — 97%+ accuracy, 0.99 ROC-AUC</li>
@@ -1734,7 +1754,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <div class="project-actions">
               <a href="https://shieldai-fraud-detection.onrender.com" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open live demo for ShieldAI Fraud Detection">🟢 Live Demo</a>
               <a href="https://github.com/ashutosh8950/shieldai-fraud-detection" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open GitHub repository for ShieldAI Fraud Detection">💻 GitHub</a>
-              <a href="#contact" class="project-action">📝 Case Study</a>
+              <a href="#contact" class="project-action">💬 Discuss Project</a>
             </div>
           </div>
           <div class="project-footer">
@@ -1762,7 +1782,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
           <div class="project-body">
             <div class="project-badge">⭐ Latest Build</div>
-            <div class="project-name">AI AutoReply ChatBot</div>
+            <h3 class="project-name">AI AutoReply ChatBot</h3>
             <p class="project-desc">WhatsApp automation using LLaMA-3.3-70B via Groq API — context-aware Hinglish replies with full chat history injection.</p>
             <ul class="project-highlights">
               <li>Groq API (LLaMA-3.3-70B) with context-aware Hinglish tone control</li>
@@ -1802,7 +1822,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
           <div class="project-body">
             <div class="project-badge">🟢 Live on Render</div>
-            <div class="project-name">TaskPilot</div>
+            <h3 class="project-name">TaskPilot</h3>
             <p class="project-desc">Full-stack project & task management web app with role-based access, Kanban board, JWT auth, and real-time analytics.</p>
             <ul class="project-highlights">
               <li>Express.js + PostgreSQL REST API for projects, tasks, and activity feeds</li>
@@ -1841,7 +1861,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
           <div class="project-body">
             <div class="project-badge">📂 GitHub</div>
-            <div class="project-name">Automated Sales Forecasting API</div>
+            <h3 class="project-name">Automated Sales Forecasting API</h3>
             <p class="project-desc">Intelligent forecasting pipeline that auto-selects the best model (XGBoost/Prophet/SARIMA) based on RMSE evaluation.</p>
             <ul class="project-highlights">
               <li>Dynamic model selection: XGBoost, Prophet, or SARIMA by RMSE</li>
@@ -1970,46 +1990,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
               </div>
             </div>
 
-            <div class="rec-coming"><span class="rec-dot"></span> LinkedIn recommendations coming soon</div>
-
           </div>
-        </div>
-
-        <!-- Card 3: Writing -->
-        <div class="proof-card reveal reveal-delay-3">
-          <h3>Writing</h3>
-          <p>Thoughts on ML, failure, and what actually sticks.</p>
-          <div class="writing-list">
-
-            <div class="writing-item">
-              <span class="writing-icon">&#10022;</span>
-              <div>
-                <div class="writing-title">I spent 6 months on Kaggle before I understood what a model actually learns</div>
-                <div class="writing-meta">Coming soon &middot; Machine Learning &middot; 6 min read</div>
-              </div>
-              <span class="writing-arrow">&rarr;</span>
-            </div>
-
-            <div class="writing-item">
-              <span class="writing-icon">&#10022;</span>
-              <div>
-                <div class="writing-title">The ML project that broke 3 times before it worked &mdash; and what each failure taught me</div>
-                <div class="writing-meta">Coming soon &middot; Data Science &middot; 7 min read</div>
-              </div>
-              <span class="writing-arrow">&rarr;</span>
-            </div>
-
-            <div class="writing-item">
-              <span class="writing-icon">&#10022;</span>
-              <div>
-                <div class="writing-title">What Coursera doesn&rsquo;t teach you &mdash; the messy middle between learning and building</div>
-                <div class="writing-meta">Coming soon &middot; Career &middot; 5 min read</div>
-              </div>
-              <span class="writing-arrow">&rarr;</span>
-            </div>
-
-          </div>
-          <div class="writing-cta"><a href="#">View all posts &rarr;</a></div>
         </div>
 
       </div>
@@ -2029,7 +2010,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           <div class="edu-info">
             <div class="edu-degree">B.E. Computer Engineering</div>
             <div class="edu-school">Thapar Institute of Engineering and Technology, Patiala</div>
-            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.4;">
+            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.4;">
               <strong>Coursework:</strong> Artificial Intelligence, Machine Learning, Deep Learning, Data Science, Data Analysis, Data Mining, Statistics, Predictive Modelling
             </div>
           </div>
@@ -2144,6 +2125,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
   </section>
 
   <!-- FOOTER -->
+  </main>
   <footer>
     <p>Built with ❤️ and 247 cups of chai by <span>Ashutosh Gupta</span> · © 2026 · All rights reserved</p>
   </footer>
@@ -2462,6 +2444,14 @@ Open to Applied ML / Computer Vision / AI Engineer roles
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
+    // Close menu on Escape key for keyboard accessibility
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinksEl.classList.contains('open')) {
+        navLinksEl.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
 
     // ── MOUSE PARALLAX ON HERO BLOBS ──
     document.addEventListener('mousemove', (e) => {
@@ -2521,8 +2511,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
       });
     }
 
-    window.addEventListener('load', () => document.body.classList.remove('is-loading'));
-    console.log('👀 Looking under the hood? Let’s talk: guptaashutosh8950@gmail.com');
+    console.log(`👀 Looking under the hood? Let's talk: guptaashutosh8950@gmail.com`);
   </script>
 
   <script>
