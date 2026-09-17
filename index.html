@@ -955,7 +955,7 @@
     @keyframes spinSlow { to { transform: rotate(360deg); } }
     .avatar-inner { position: relative; z-index: 1; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; border-radius: 20px; background: rgba(5,10,20,0.62); border: 1px solid var(--border); padding: 2rem 1.2rem; backdrop-filter: blur(12px); }
     body.light-mode .avatar-inner { background: rgba(255,255,255,0.75); }
-    .avatar-face { width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-size: 4rem; font-weight: 800; color: var(--bg); background: linear-gradient(135deg, var(--cyan), #A78BFA); border: 4px solid rgba(255,255,255,0.18); box-shadow: 0 0 45px var(--cyan-glow); }
+    .avatar-face { width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-size: 4rem; font-weight: 800; color: var(--bg); background: linear-gradient(135deg, var(--cyan), #A78BFA); border: 4px solid rgba(255,255,255,0.18); box-shadow: 0 0 45px var(--cyan-glow); object-fit: cover; }
     .avatar-caption { text-align: center; }
     .avatar-caption strong { color: var(--white); font-family: var(--display); font-size: 1.05rem; }
     .avatar-caption span { display: block; color: var(--muted); font-family: var(--mono); font-size: 0.72rem; margin-top: 0.35rem; }
@@ -1388,7 +1388,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
     <aside class="hero-visual" aria-label="Ashutosh Gupta profile avatar">
       <div class="avatar-card">
         <div class="avatar-inner">
-          <div class="avatar-face" aria-hidden="true">AG</div>
+          <img class="avatar-face" src="assets/AI.png" alt="Ashutosh Gupta professional profile photo" />
           <div class="avatar-caption">
             <strong>Ashutosh Gupta</strong>
             <span>AI/ML Engineer · OCR · Computer Vision</span>
