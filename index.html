@@ -1185,7 +1185,10 @@
     .project-case-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin-top: 0.85rem; }
     .project-case-flow span { color: var(--text); font-family: var(--mono); font-size: 0.6rem; padding: 0.28rem 0.45rem; border-radius: 999px; border: 1px solid var(--border2); background: var(--surface); }
     .project-case-flow b { color: var(--cyan); font-family: var(--mono); font-size: 0.68rem; }
+    .project-case-note { margin-top: 0.85rem; padding: 0.75rem; border-left: 2px solid var(--cyan); border-radius: 0 8px 8px 0; background: rgba(255,59,77,0.04); color: var(--muted); font-size: 0.7rem; line-height: 1.55; }
+    .project-case-note strong { color: var(--cyan); font-weight: 700; }
     body.light-mode .project-case-point { background: rgba(255,255,255,0.5); }
+    body.light-mode .project-case-note { background: rgba(180,35,59,0.05); }
     .projects-toggle-wrap { display: flex; justify-content: center; margin-top: 2rem; }
     .projects-toggle { display: inline-flex; align-items: center; gap: 0.55rem; color: var(--cyan); background: transparent; border: 1px solid var(--border2); border-radius: 8px; padding: 0.7rem 1rem; font-family: var(--mono); font-size: 0.72rem; cursor: pointer; transition: all 0.2s ease; }
     .projects-toggle:hover { background: var(--cyan-dim); border-color: var(--cyan); transform: translateY(-2px); }
@@ -1705,7 +1708,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
                 <div class="exp-role">AI Trainee</div>
                 <div class="timeline-title exp-company">Virves Software Solutions</div>
               </div>
-              <div class="exp-location">Remote &middot; <a href="https://drive.google.com/file/d/1zNPHZZxacrnLfct-giRjf3FjCipIOEo_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="View Virves Software Solutions internship certificate">Certificate</a></div>
+              <div class="exp-location">Remote &middot; <a href="https://drive.google.com/file/d/1zNPHZZxacrnLfct-giRjf3FjCipIOEo_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Open Virves Software Solutions internship certificate">View Certificate</a></div>
             </div>
             <ul class="project-highlights">
               <li>Engineered a <strong>FastAPI backend</strong> to validate Aadhaar, PAN Card, and Driving License uploads using <strong>EasyOCR, OpenCV, and explainable rule-based scoring</strong> with ACCEPTED, REJECTED, REUPLOAD_REQUIRED, and MANUAL_REVIEW outcomes.</li>
@@ -1734,7 +1737,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <h3 class="case-study-title">Virves Multi-Document Validator</h3>
             <p class="case-study-intro">A production-style document verification workflow for Aadhaar, PAN Card, and Driving License uploads. The system combines OCR, image preprocessing, document-specific validation, explainable scoring, persistence, and manual review routing.</p>
           </div>
-          <a class="case-study-link" href="https://drive.google.com/file/d/1zNPHZZxacrnLfct-giRjf3FjCipIOEo_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Verify Certificate ↗</a>
+          <a class="case-study-link" href="https://drive.google.com/file/d/1zNPHZZxacrnLfct-giRjf3FjCipIOEo_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Open Virves Software Solutions internship certificate">View Certificate ↗</a>
         </div>
 
         <div class="case-study-grid">
@@ -1785,6 +1788,13 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
         </div>
 
+        <div class="project-case-metrics" aria-label="Virves project scope">
+          <div class="project-metric"><strong>3</strong><span>Document types</span></div>
+          <div class="project-metric"><strong>4</strong><span>Decision outcomes</span></div>
+          <div class="project-metric"><strong>OCR</strong><span>Vision pipeline</span></div>
+          <div class="project-metric"><strong>Review</strong><span>Human escalation</span></div>
+        </div>
+
         <div class="architecture-panel">
           <div class="architecture-kicker">System architecture · select a layer</div>
           <div class="architecture-flow" role="list" aria-label="Virves system architecture">
@@ -1829,6 +1839,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <p>OCR failure modes, noisy document inputs, name matching, explainable rule-based scoring, MongoDB/GridFS persistence, manual-review workflows, API design, testing strategy, CPU tradeoffs, and future improvements.</p>
           </details>
         </div>
+        <p class="project-case-note"><strong>Data responsibility:</strong> This portfolio describes the validation workflow without exposing identity-document images, applicant records, or other sensitive personal data.</p>
       </div>
     </div>
   </section>
@@ -1875,6 +1886,9 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           <div class="skill-card-name">ML, DL & NLP</div>
           <div class="skill-pills">
             <span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">TF-IDF</span>
+            <span class="skill-pill">Ensemble Learning</span>
+            <span class="skill-pill">Probability Calibration</span>
             <span class="skill-pill">PyTorch</span>
             <span class="skill-pill">TensorFlow</span>
             <span class="skill-pill">Keras</span>
@@ -1890,6 +1904,8 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="skill-pill">FastAPI</span>
             <span class="skill-pill">Uvicorn</span>
             <span class="skill-pill">Pydantic</span>
+            <span class="skill-pill">SlowAPI</span>
+            <span class="skill-pill">Loguru</span>
             <span class="skill-pill">Flask</span>
             <span class="skill-pill">REST APIs</span>
             <span class="skill-pill">MongoDB</span>
@@ -1930,10 +1946,10 @@ Open to Applied ML / Computer Vision / AI Engineer roles
         </div>
       </div>
 
-      <div class="stack-marquee reveal reveal-delay-2" role="img" aria-label="Technology stack: Python, EasyOCR, OpenCV, Pydantic, FastAPI, MongoDB, GridFS, Docker, and pytest">
+      <div class="stack-marquee reveal reveal-delay-2" role="img" aria-label="Technology stack: Python, spaCy, TF-IDF, scikit-learn, FastAPI, Pydantic, Docker, Render, and pytest">
         <div class="marquee-track" aria-hidden="true">
-          <span class="logo-pill">🐍 Python</span><span class="logo-pill">📄 EasyOCR</span><span class="logo-pill">👁️ OpenCV</span><span class="logo-pill">🧩 Pydantic</span><span class="logo-pill">⚡ FastAPI</span><span class="logo-pill">🍃 MongoDB</span><span class="logo-pill">🗂️ GridFS</span><span class="logo-pill">🐳 Docker</span><span class="logo-pill">🧪 pytest</span>
-          <span class="logo-pill">🐍 Python</span><span class="logo-pill">📄 EasyOCR</span><span class="logo-pill">👁️ OpenCV</span><span class="logo-pill">🧩 Pydantic</span><span class="logo-pill">⚡ FastAPI</span><span class="logo-pill">🍃 MongoDB</span><span class="logo-pill">🗂️ GridFS</span><span class="logo-pill">🐳 Docker</span><span class="logo-pill">🧪 pytest</span>
+          <span class="logo-pill">🐍 Python</span><span class="logo-pill">🧠 spaCy</span><span class="logo-pill">🔤 TF-IDF</span><span class="logo-pill">🤖 scikit-learn</span><span class="logo-pill">⚡ FastAPI</span><span class="logo-pill">🧩 Pydantic</span><span class="logo-pill">🐳 Docker</span><span class="logo-pill">🚀 Render</span><span class="logo-pill">🧪 pytest</span>
+          <span class="logo-pill">🐍 Python</span><span class="logo-pill">🧠 spaCy</span><span class="logo-pill">🔤 TF-IDF</span><span class="logo-pill">🤖 scikit-learn</span><span class="logo-pill">⚡ FastAPI</span><span class="logo-pill">🧩 Pydantic</span><span class="logo-pill">🐳 Docker</span><span class="logo-pill">🚀 Render</span><span class="logo-pill">🧪 pytest</span>
         </div>
       </div>
     </div>
@@ -2011,41 +2027,56 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             </div>
           </div>
           <div class="project-preview image-preview">
-            <img src="assets/fake-news-detector-dashboard.png" alt="TruthScan fake news detector dashboard showing article analysis form, ensemble model scores, and confidence workflow in dark mode" width="580" height="855" loading="lazy" decoding="async" />
-            <span class="project-preview-caption">Live dashboard preview</span>
+            <img src="assets/fake-news-detector-dashboard.png" alt="TruthScan fake news detector dashboard showing the red-black article analysis interface, usage metrics, and ensemble workflow" width="1200" height="352" loading="lazy" decoding="async" />
+            <span class="project-preview-caption">Live TruthScan dashboard</span>
           </div>
           <div class="project-body">
-            <div class="project-badge">🟢 Live on Render</div>
+            <div class="project-badge">🟢 Deployed on Render</div>
             <h3 class="project-name">TruthScan — Fake News Detector</h3>
-            <p class="project-desc">Deployed fake news detection system using NLP preprocessing, TF-IDF features, and an accuracy-weighted ensemble trained on 40K+ articles, with FastAPI, CI/CD, and a dark-mode frontend.</p>
+            <p class="project-desc">Deployed fake-news detection system using spaCy NLP preprocessing, bigram TF-IDF features, and a five-model calibrated probability ensemble evaluated on unseen articles.</p>
             <ul class="project-highlights">
-              <li>Trained five ML models on 40K+ articles with accuracy-weighted ensemble voting achieving ~99.3% reported accuracy</li>
-              <li>Built an NLP pipeline with lemmatization, stopword removal, title weighting, and bigram TF-IDF features</li>
-              <li>Created FastAPI endpoints for article analysis, health checks, and model information</li>
-              <li>Added GitHub Actions CI/CD, Docker packaging, input validation, and a deployed dark-mode frontend</li>
+              <li>Built a five-model calibrated ensemble from 24,353 labeled articles, using 20,700 records for training and 3,653 for held-out evaluation</li>
+              <li>Achieved 98.44% held-out accuracy with a 0.013835 Brier score by averaging calibrated class probabilities</li>
+              <li>Productionized the NLP pipeline and FastAPI service with spaCy preprocessing, bigram TF-IDF, Pydantic validation, rate limiting, Docker, and Render deployment</li>
             </ul>
             <div class="project-actions">
               <a href="https://truthscan-fake-news-detector.onrender.com" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open live demo for TruthScan">🟢 Live Demo</a>
               <a href="https://github.com/ashutosh8950/fake-news-detector" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open GitHub repository for TruthScan">💻 GitHub</a>
-              <a href="https://huggingface.co/GuptaAshutosh/truthscan-fake-news-distilbert" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open Hugging Face model artifact for TruthScan">🤗 Model Artifact</a>
+              <a href="https://huggingface.co/GuptaAshutosh/truthscan-fake-news-distilbert" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open the external Hugging Face model for TruthScan">🤗 Hugging Face Model</a>
+            </div>
+            <div class="project-case-metrics project-card-metrics" aria-label="TruthScan headline metrics">
+              <div class="project-metric"><strong>98.44%</strong><span>Held-out accuracy</span></div>
+              <div class="project-metric"><strong>24,353</strong><span>Labeled articles</span></div>
+              <div class="project-metric"><strong>5</strong><span>Calibrated models</span></div>
+              <div class="project-metric"><strong>3,653</strong><span>Unseen articles</span></div>
             </div>
             <details class="project-case-study">
               <summary>Read technical case study</summary>
               <div class="project-case-grid">
                 <div class="project-case-point"><strong>Problem</strong><span>News classification needs both strong language understanding and a practical API workflow that can explain confidence and scale beyond a notebook.</span></div>
-                <div class="project-case-point"><strong>Model strategy</strong><span>Used TF-IDF features with accuracy-weighted voting across five classical ML models to balance model comparison, interpretability, and deployment practicality.</span></div>
-                <div class="project-case-point"><strong>Production layer</strong><span>Added FastAPI endpoints, health and model-information routes, input validation, Docker packaging, GitHub Actions, and a deployed frontend.</span></div>
-                <div class="project-case-point"><strong>Interview focus</strong><span>Dataset construction, leakage checks, precision versus recall, threshold selection, feature weighting, model comparison, and responsible interpretation of reported accuracy.</span></div>
+                <div class="project-case-point"><strong>Model strategy</strong><span>Used bigram TF-IDF features with five calibrated classical ML models and averaged calibrated probabilities to produce a confidence-aware ensemble.</span></div>
+                <div class="project-case-point"><strong>Production layer</strong><span>Added FastAPI analysis, health, metrics, and model-information routes with Pydantic validation, SlowAPI rate limiting, structured logging, Docker packaging, and Render deployment.</span></div>
+                <div class="project-case-point"><strong>Interview focus</strong><span>Dataset construction, leakage checks, precision versus recall, threshold selection, model comparison, and responsible interpretation of reported accuracy.</span></div>
               </div>
+              <p class="project-case-note"><strong>Production ensemble:</strong> Logistic Regression, Decision Tree, Gradient Boosting, Multinomial Naive Bayes, and Linear SVC.</p>
+              <div class="project-case-flow" aria-label="TruthScan machine learning pipeline">
+                <span>Article input</span><b>→</b><span>spaCy cleaning</span><b>→</b><span>TF-IDF features</span><b>→</b><span>5 calibrated models</span><b>→</b><span>Probability average</span><b>→</b><span>FastAPI response</span>
+              </div>
+              <p class="project-case-note"><strong>Production details:</strong> The ensemble endpoint is limited to 10 requests per minute per IP, while deep analysis is limited to 5 requests per minute per IP. Confidence represents calibrated probability on the project’s evaluation distribution, not factual certainty.</p>
+              <p class="project-case-note"><strong>Responsible-use note:</strong> TruthScan estimates whether an article resembles patterns learned from its dataset; it does not independently verify claims against live external sources. DistilBERT is available as an optional external Hugging Face integration, while the deployed path primarily uses the calibrated scikit-learn ensemble.</p>
             </details>
           </div>
           <div class="project-footer">
             <span class="tech-tag">FastAPI</span>
             <span class="tech-tag">TF-IDF</span>
-            <span class="tech-tag">Ensemble ML</span>
+            <span class="tech-tag">Calibrated Ensemble</span>
             <span class="tech-tag">scikit-learn</span>
+            <span class="tech-tag">spaCy</span>
+            <span class="tech-tag">Pydantic</span>
+            <span class="tech-tag">SlowAPI</span>
+            <span class="tech-tag">pytest</span>
+            <span class="tech-tag">Uvicorn/Gunicorn</span>
             <span class="tech-tag">Docker</span>
-            <span class="tech-tag">GitHub Actions</span>
             <span class="tech-tag">Hugging Face</span>
             <span class="tech-tag">Render</span>
           </div>
