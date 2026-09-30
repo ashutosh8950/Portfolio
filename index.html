@@ -1567,8 +1567,8 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           <span class="stat-label">Live Demos</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">0.99</span>
-          <span class="stat-label">ROC-AUC Fraud Model</span>
+          <span class="stat-num">98.4</span>
+          <span class="stat-label">Fake News Held-Out Accuracy</span>
         </div>
         <div class="stat-item">
           <span class="stat-num">2026</span>
@@ -1613,10 +1613,10 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             I'm a Computer Engineering graduate from Thapar Institute of Engineering and Technology, focused on applied AI/ML engineering, OCR pipelines, computer vision, and backend systems.
           </p>
           <p>
-            I build practical AI systems that connect model logic with deployable products: FastAPI/Flask APIs, validation workflows, dashboards, and production-style testing.
+            I build practical AI systems that connect model logic with deployable products: FastAPI/Flask APIs, validation workflows, dashboards, and release-ready testing.
           </p>
           <p>
-            My recent live project work includes OCR-based document validation using EasyOCR, image preprocessing, rule-based scoring, strict name matching, and performance optimization for real-world noisy document inputs.
+            My recent live project work includes OCR-based document validation using Tesseract-first hybrid OCR (EasyOCR fallback), OpenCV preprocessing, rule-based scoring, strict name matching, and performance optimization for real-world noisy document inputs.
           </p>
           <div class="about-tags">
             <span class="tag">Machine Learning</span>
@@ -1696,7 +1696,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
     <div class="container">
       <div class="section-eyebrow reveal">Experience</div>
       <h2 class="section-title reveal">Applied AI in document workflows.</h2>
-      <p class="section-sub reveal">Hands-on work across OCR pipelines, backend validation, and production-style reliability.</p>
+      <p class="section-sub reveal">Hands-on work across OCR pipelines, backend validation, and deployment-focused reliability.</p>
 
       <div class="timeline">
         <div class="timeline-item reveal reveal-delay-1">
@@ -1713,13 +1713,14 @@ Open to Applied ML / Computer Vision / AI Engineer roles
               <div class="exp-location">Remote &middot; <a href="https://drive.google.com/file/d/1zNPHZZxacrnLfct-giRjf3FjCipIOEo_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Open Virves Software Solutions internship certificate">View Certificate</a></div>
             </div>
             <ul class="project-highlights">
-              <li>Engineered a <strong>FastAPI backend</strong> to validate Aadhaar, PAN Card, and Driving License uploads using <strong>EasyOCR, OpenCV, and explainable rule-based scoring</strong> with ACCEPTED, REJECTED, REUPLOAD_REQUIRED, and MANUAL_REVIEW outcomes.</li>
-              <li>Implemented OCR extraction, document-specific number and identity-field parsing, PAN holder-name matching, confidence scoring, applicant tracking, manual-review approval/rejection APIs, and <strong>MongoDB/GridFS persistence</strong>.</li>
-              <li>Optimized CPU-bound OCR through staged candidate generation, image resizing, rotation/crop deduplication, targeted field OCR, bounded PAN OCR budgets, and high-confidence early-exit strategies; added automated tests, benchmarks, and technical documentation.</li>
+              <li>Built a <strong>FastAPI backend</strong> validating Aadhaar, PAN, and Driving License uploads using <strong>Tesseract-first hybrid OCR (EasyOCR fallback), OpenCV preprocessing, and explainable rule-based scoring</strong> with ACCEPTED, REJECTED, REUPLOAD_REQUIRED, and MANUAL_REVIEW outcomes.</li>
+              <li>Implemented document-type detection, Aadhaar/PAN/DL number parsing, Aadhaar and PAN identity-field extraction, PAN holder-name matching, applicant tracking, manual-review approval/rejection APIs, and <strong>MongoDB/GridFS persistence</strong>.</li>
+              <li>Optimized CPU-bound OCR through staged candidate generation, image resizing, rotation/crop deduplication, targeted field OCR, capped PAN OCR calls, and early exits; added pytest tests, synthetic-document benchmarks, and technical documentation.</li>
             </ul>
             <div class="exp-tags">
               <span class="exp-tag">Python</span>
               <span class="exp-tag">FastAPI</span>
+              <span class="exp-tag">Tesseract</span>
               <span class="exp-tag">EasyOCR</span>
               <span class="exp-tag">OpenCV</span>
               <span class="exp-tag">MongoDB</span>
@@ -1737,7 +1738,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           <div>
             <div class="case-study-kicker">Flagship proof of work · Internship project</div>
             <h3 class="case-study-title">Virves Multi-Document Validator</h3>
-            <p class="case-study-intro">A production-style document verification workflow for Aadhaar, PAN Card, and Driving License uploads. The system combines OCR, image preprocessing, document-specific validation, explainable scoring, persistence, and manual review routing.</p>
+            <p class="case-study-intro">A document intake validation workflow for Aadhaar, PAN Card, and Driving License uploads. The system combines OCR, image preprocessing, document-specific validation, explainable scoring, persistence, and manual review routing.</p>
           </div>
           <a class="case-study-link" href="https://drive.google.com/file/d/1zNPHZZxacrnLfct-giRjf3FjCipIOEo_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Open Virves Software Solutions internship certificate">View Certificate ↗</a>
         </div>
@@ -1753,7 +1754,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
           <div class="case-study-card">
             <h3>Engineering focus</h3>
-            <p>Improved CPU-bound OCR through staged candidates, deduplication, targeted field OCR, bounded PAN budgets, and high-confidence early exits.</p>
+            <p>Improved CPU-bound OCR through staged candidates, deduplication, targeted field OCR, capped PAN OCR calls, and early exits.</p>
           </div>
         </div>
 
@@ -1771,7 +1772,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           <div class="case-study-outcome accepted" data-outcome="accepted">
             <span class="outcome-dot" aria-hidden="true"></span>
             <strong>ACCEPTED</strong>
-            <span>High-confidence match</span>
+            <span>Strong rule match</span>
           </div>
           <div class="case-study-outcome rejected" data-outcome="rejected">
             <span class="outcome-dot" aria-hidden="true"></span>
@@ -1809,7 +1810,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             </button>
             <span class="architecture-connector" aria-hidden="true">→</span>
             <button class="architecture-node" type="button" data-architecture="ocr" aria-pressed="false">
-              <small>Vision layer</small><strong>OCR + preprocessing</strong><span>EasyOCR, OpenCV, candidate generation</span>
+              <small>Vision layer</small><strong>OCR + preprocessing</strong><span>Tesseract-first hybrid OCR (EasyOCR fallback), OpenCV, candidate generation</span>
             </button>
             <span class="architecture-connector" aria-hidden="true">→</span>
             <button class="architecture-node" type="button" data-architecture="rules" aria-pressed="false">
@@ -1822,7 +1823,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
           <div class="architecture-branches">
             <div class="architecture-branch"><strong>MongoDB / GridFS</strong><span>Stores applicant metadata, source files, extracted fields, and review state.</span></div>
-            <div class="architecture-branch"><strong>Manual-review API</strong><span>Allows reviewers to approve or reject uncertain applications with traceable status changes.</span></div>
+            <div class="architecture-branch"><strong>Manual-review API</strong><span>Allows reviewers to approve or reject uncertain applications with reviewer comments and status transitions.</span></div>
           </div>
           <p class="architecture-detail" id="architectureDetail">Receives a document upload and begins a document-specific validation request.</p>
         </div>
@@ -1841,7 +1842,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <p>OCR failure modes, noisy document inputs, name matching, explainable rule-based scoring, MongoDB/GridFS persistence, manual-review workflows, API design, testing strategy, CPU tradeoffs, and future improvements.</p>
           </details>
         </div>
-        <p class="project-case-note"><strong>Data responsibility:</strong> This portfolio describes the validation workflow without exposing identity-document images, applicant records, or other sensitive personal data.</p>
+        <p class="project-case-note"><strong>Data responsibility:</strong> This portfolio describes the validation workflow without exposing identity-document images, applicant records, or other sensitive personal data. This is a prototype validation workflow. It checks document type, layout, and field patterns, and does not verify authenticity or issuer records.</p>
       </div>
     </div>
   </section>
@@ -1869,6 +1870,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           <div class="skill-card-icon">👁️</div>
           <div class="skill-card-name">Computer Vision & OCR</div>
           <div class="skill-pills">
+            <span class="skill-pill">Tesseract</span>
             <span class="skill-pill">EasyOCR</span>
             <span class="skill-pill">OCR Pipelines</span>
             <span class="skill-pill">Image Preprocessing</span>
@@ -1877,7 +1879,6 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="skill-pill">Name Matching</span>
             <span class="skill-pill">Image Quality Assessment</span>
             <span class="skill-pill">OpenCV</span>
-            <span class="skill-pill">Tesseract</span>
             <span class="skill-pill">PyMuPDF</span>
             <span class="skill-pill">Pillow</span>
             <span class="skill-pill">NumPy</span>
@@ -1933,7 +1934,6 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           <div class="skill-pills">
             <span class="skill-pill">Git / GitHub</span>
             <span class="skill-pill">Docker</span>
-            <span class="skill-pill">GitHub Actions</span>
             <span class="skill-pill">Render</span>
             <span class="skill-pill">Postman</span>
             <span class="skill-pill">VS Code</span>
@@ -2302,7 +2302,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
         <div class="timeline-item reveal reveal-delay-1"><div class="timeline-year">2022</div><div><div class="timeline-title">Started Computer Engineering</div><div class="timeline-text">Built fundamentals in programming, data structures, databases, and core CS.</div></div></div>
         <div class="timeline-item reveal reveal-delay-2"><div class="timeline-year">2024</div><div><div class="timeline-title">Moved deeper into ML & Data Science</div><div class="timeline-text">Worked with supervised learning, time series, NLP preprocessing, model evaluation, and visual analytics.</div></div></div>
         <div class="timeline-item reveal reveal-delay-3"><div class="timeline-year">2025</div><div><div class="timeline-title">Built NLP and LLM projects</div><div class="timeline-text">Explored summarization, fake news detection, LLM prompts, automation, and API-driven AI workflows.</div></div></div>
-        <div class="timeline-item reveal reveal-delay-4"><div class="timeline-year">2026</div><div><div class="timeline-title">Applied AI systems focus</div><div class="timeline-text">Focused on applied AI systems, OCR-based document validation, FastAPI backends, model evaluation, and production-style testing.</div></div></div>
+        <div class="timeline-item reveal reveal-delay-4"><div class="timeline-year">2026</div><div><div class="timeline-title">Applied AI systems focus</div><div class="timeline-text">Focused on applied AI systems, OCR-based document validation, FastAPI backends, model evaluation, and deployment-ready testing.</div></div></div>
       </div>
     </div>
   </section>
@@ -2897,7 +2897,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
     const architectureCopy = {
       upload: 'Receives a document upload and begins a document-specific validation request.',
       api: 'The FastAPI layer validates the request, coordinates the workflow, exposes review endpoints, and returns explainable status outcomes.',
-      ocr: 'OpenCV prepares bounded image candidates while EasyOCR extracts the fields needed for document-specific checks.',
+      ocr: 'Tesseract-first hybrid OCR (EasyOCR fallback) prepares image candidates while OpenCV handles preprocessing for document-specific checks.',
       rules: 'Parsed numbers, identity fields, name matching, image quality, and OCR confidence are combined into explainable rule-based scoring.',
       routing: 'The final state is routed to ACCEPTED, REJECTED, REUPLOAD_REQUIRED, or MANUAL_REVIEW instead of hiding uncertainty.'
     };
@@ -2981,11 +2981,12 @@ Open to Applied ML / Computer Vision / AI Engineer roles
       let start = 0;
       const duration = 1500;
       const step = target / (duration / 16);
-      const format = (value) => target < 1 ? value.toFixed(2) : Math.floor(value);
+      const format = (value) => target % 1 === 0 ? Math.floor(value) : value.toFixed(1);
       const timer = setInterval(() => {
         start += step;
         if (start >= target) {
-          el.innerHTML = (target < 1 ? target.toFixed(2) : target) + '<span>' + suffix + '</span>';
+          const displayValue = target % 1 === 0 ? target.toFixed(0) : target.toFixed(1);
+          el.innerHTML = displayValue + '<span>' + suffix + '</span>';
           clearInterval(timer);
         } else {
           el.innerHTML = format(start) + '<span>' + suffix + '</span>';
@@ -2998,7 +2999,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
         if (e.isIntersecting) {
           const nums = e.target.querySelectorAll('.stat-num');
           const data = [
-            [6, ''], [4, '+'], [0.99, ''], [2026, '']
+            [6, ''], [4, '+'], [98.4, '%'], [2026, '']
           ];
           nums.forEach((n, i) => animateCounter(n, data[i][0], data[i][1]));
           statsObserver.unobserve(e.target);
