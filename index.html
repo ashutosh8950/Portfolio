@@ -1070,6 +1070,14 @@
     .gh-stat { background: rgba(255,59,77,0.06); border: 1px solid rgba(255,59,77,0.12); border-radius: 8px; padding: 0.6rem 0.8rem; }
     .gh-stat-val { color: var(--cyan, #FF3B4D); font-size: 1.2rem; font-weight: 800; display: block; }
     .gh-stat-lbl { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .gh-recent-wrap { margin: 1rem 0; }
+    .gh-recent-title { color: var(--white); font-family: var(--display); font-size: 0.82rem; margin-bottom: 0.5rem; }
+    .gh-recent { list-style: none; display: grid; gap: 0.4rem; }
+    .gh-recent li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.3rem 0.6rem; min-width: 0; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+    .gh-recent a { color: var(--cyan); font-size: 0.76rem; text-decoration: none; overflow-wrap: anywhere; }
+    .gh-recent a:hover, .gh-activity-link:hover { text-decoration: underline; }
+    .gh-recent span { color: var(--muted); font-family: var(--mono); font-size: 0.64rem; white-space: nowrap; }
+    .gh-activity-link { display: inline-block; margin-top: 0.6rem; color: var(--cyan); font-family: var(--mono); font-size: 0.68rem; text-decoration: none; }
     .gh-graph-wrap { border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem; background: rgba(0,0,0,0.2); overflow: hidden; }
     .gh-graph-wrap img { width: 100%; border-radius: 6px; display: block; filter: brightness(2.2) contrast(1.5) saturate(1.8) !important; }
     .rec-list { display: flex; flex-direction: column; gap: 0.6rem; padding-right: 0.25rem; }
@@ -2278,13 +2286,23 @@ Open to Applied ML / Computer Vision / AI Engineer roles
         <!-- Card 1: GitHub Activity -->
         <div class="proof-card reveal reveal-delay-1">
           <h3>GitHub Activity</h3>
-          <p>9 public repositories, 5 highlighted projects — built and shipped.</p>
+          <p><span id="gh-repo-count">9</span> public repositories, 5 highlighted projects — built and shipped.</p>
           <p class="proof-updated">Snapshot: October 2026</p>
           <div class="gh-stats">
-            <div class="gh-stat"><span class="gh-stat-val">9</span><span class="gh-stat-lbl">Public Repos</span></div>
+            <div class="gh-stat"><span class="gh-stat-val" id="gh-public-repos">9</span><span class="gh-stat-lbl">Public Repos</span></div>
             <div class="gh-stat"><span class="gh-stat-val">3</span><span class="gh-stat-lbl">Certifications</span></div>
             <div class="gh-stat"><span class="gh-stat-val">5</span><span class="gh-stat-lbl">Featured Projects</span></div>
             <div class="gh-stat"><span class="gh-stat-val">4</span><span class="gh-stat-lbl">Live Demos</span></div>
+          </div>
+          <div class="gh-recent-wrap">
+            <h4 class="gh-recent-title">Recent activity</h4>
+            <ul id="gh-recent" class="gh-recent">
+              <li><a href="https://github.com/ashutosh8950/ai-resume-screener" target="_blank" rel="noopener noreferrer">ai-resume-screener</a><span>Oct 8, 2026</span></li>
+              <li><a href="https://github.com/ashutosh8950/Portfolio" target="_blank" rel="noopener noreferrer">Portfolio</a><span>Oct 8, 2026</span></li>
+              <li><a href="https://github.com/ashutosh8950/AI-AutoReply-Chatbot" target="_blank" rel="noopener noreferrer">AI-AutoReply-Chatbot</a><span>Oct 6, 2026</span></li>
+              <li><a href="https://github.com/ashutosh8950/TaskPilot" target="_blank" rel="noopener noreferrer">TaskPilot</a><span>Oct 6, 2026</span></li>
+              <li><a href="https://github.com/ashutosh8950/shieldai-fraud-detection" target="_blank" rel="noopener noreferrer">shieldai-fraud-detection</a><span>Oct 6, 2026</span></li>
+            </ul>
           </div>
           <div class="gh-graph-wrap">
             <img class="github-graph"
@@ -2292,6 +2310,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
                  alt="Ashutosh Gupta GitHub contribution graph"
                  loading="lazy" />
           </div>
+          <a class="gh-activity-link" href="https://github.com/ashutosh8950" target="_blank" rel="noopener noreferrer">View full activity on GitHub →</a>
         </div>
 
         <!-- Card 2: Recommendations -->
@@ -3194,6 +3213,90 @@ Open to Applied ML / Computer Vision / AI Engineer roles
     }
 
     animate();
+  })();
+
+  (function () {
+    const cacheKey = 'github-activity-cache';
+    const cacheDuration = 30 * 60 * 1000;
+
+    function normalizeActivity(user, repos) {
+      if (!user || !Number.isInteger(user.public_repos) || !Array.isArray(repos)) throw new Error();
+      const recent = repos.filter(function (repo) {
+        if (!repo || typeof repo.name !== 'string' || typeof repo.fork !== 'boolean' || typeof repo.pushed_at !== 'string' || Number.isNaN(Date.parse(repo.pushed_at))) throw new Error();
+        return !repo.fork && repo.name !== 'ashutosh8950';
+      }).sort(function (first, second) {
+        return Date.parse(second.pushed_at) - Date.parse(first.pushed_at);
+      }).slice(0, 5);
+      if (recent.length !== 5) throw new Error();
+      return { publicRepos: user.public_repos, repos: recent };
+    }
+
+    function relativeTime(pushedAt) {
+      const days = Math.max(0, Math.floor((Date.now() - Date.parse(pushedAt)) / 86400000));
+      if (days === 0) return 'today';
+      if (days < 7) return days + ' day' + (days === 1 ? '' : 's') + ' ago';
+      const weeks = Math.floor(days / 7);
+      if (weeks < 5) return weeks + ' week' + (weeks === 1 ? '' : 's') + ' ago';
+      const months = Math.floor(days / 30);
+      if (months < 12) return months + ' month' + (months === 1 ? '' : 's') + ' ago';
+      const years = Math.floor(days / 365);
+      return years + ' year' + (years === 1 ? '' : 's') + ' ago';
+    }
+
+    async function updateActivity() {
+      try {
+        const now = Date.now();
+        let activity = null;
+        const cachedValue = sessionStorage.getItem(cacheKey);
+        if (cachedValue) {
+          try {
+            const cached = JSON.parse(cachedValue);
+            if (Number.isFinite(cached.cachedAt) && now - cached.cachedAt >= 0 && now - cached.cachedAt < cacheDuration) {
+              activity = normalizeActivity(cached.user, cached.repos);
+            }
+          } catch (error) { }
+        }
+
+        if (!activity) {
+          const responses = await Promise.all([
+            fetch('https://api.github.com/users/ashutosh8950'),
+            fetch('https://api.github.com/users/ashutosh8950/repos?sort=pushed&direction=desc&per_page=10&type=owner')
+          ]);
+          if (responses.some(function (response) { return !response.ok; })) return;
+          const data = await Promise.all(responses.map(function (response) { return response.json(); }));
+          activity = normalizeActivity(data[0], data[1]);
+          sessionStorage.setItem(cacheKey, JSON.stringify({ cachedAt: now, user: data[0], repos: data[1] }));
+        }
+
+        const publicRepos = document.getElementById('gh-public-repos');
+        const repoCount = document.getElementById('gh-repo-count');
+        const recentList = document.getElementById('gh-recent');
+        const snapshot = document.querySelector('.proof-updated');
+        if (!publicRepos || !repoCount || !recentList || !snapshot) return;
+
+        const listItems = document.createDocumentFragment();
+        activity.repos.forEach(function (repo) {
+          const item = document.createElement('li');
+          const link = document.createElement('a');
+          const time = document.createElement('span');
+          link.href = 'https://github.com/ashutosh8950/' + encodeURIComponent(repo.name);
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = repo.name;
+          time.textContent = relativeTime(repo.pushed_at);
+          item.append(link, time);
+          listItems.append(item);
+        });
+
+        const latestMonth = new Date(Date.parse(activity.repos[0].pushed_at)).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+        publicRepos.textContent = activity.publicRepos;
+        repoCount.textContent = activity.publicRepos;
+        recentList.replaceChildren(listItems);
+        snapshot.textContent = 'Snapshot: ' + latestMonth;
+      } catch (error) { }
+    }
+
+    updateActivity();
   })();
   </script>
 </body>
