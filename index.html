@@ -1080,6 +1080,27 @@
     .gh-activity-link { display: inline-block; margin-top: 0.6rem; color: var(--cyan); font-family: var(--mono); font-size: 0.68rem; text-decoration: none; }
     .gh-graph-wrap { border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem; background: rgba(0,0,0,0.2); overflow: hidden; }
     .gh-graph-wrap img { width: 100%; border-radius: 6px; display: block; filter: brightness(2.2) contrast(1.5) saturate(1.8) !important; }
+    .gh-graph-wrap.gh-has-contrib { border: 0; padding: 0; background: transparent; }
+    .gh-contrib { margin-top: 1.2rem; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); padding: 0.75rem; width: 100%; box-sizing: border-box; min-width: 0; overflow: hidden; }
+    .gh-contrib-total { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); margin-bottom: 0.6rem; }
+    .gh-contrib-months { display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); height: 0.9rem; font-family: var(--mono); font-size: 0.58rem; color: var(--muted); white-space: nowrap; overflow: visible; }
+    .gh-contrib-months span { min-width: 0; overflow: visible; }
+    .gh-contrib-grid { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, auto); grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 2px; width: 100%; min-width: 0; }
+    .gh-contrib-cell { aspect-ratio: 1 / 1; border-radius: 2px; min-width: 0; }
+    .gh-contrib-cell[title]:hover { outline: 1px solid var(--cyan); }
+    .gh-contrib-pad { visibility: hidden; }
+    .gh-l0 { background: rgba(255,255,255,0.07); }
+    .gh-l1 { background: rgba(255,59,77,0.30); }
+    .gh-l2 { background: rgba(255,59,77,0.55); }
+    .gh-l3 { background: rgba(255,59,77,0.78); }
+    .gh-l4 { background: rgba(255,59,77,1); }
+    .gh-contrib-legend { display: flex; align-items: center; justify-content: flex-end; gap: 0.3rem; margin-top: 0.6rem; font-family: var(--mono); font-size: 0.58rem; color: var(--muted); }
+    .gh-contrib-legend .gh-contrib-cell { width: 0.55rem; height: 0.55rem; flex: 0 0 0.55rem; }
+    body.light-mode .gh-l0 { background: rgba(0,0,0,0.08); }
+    body.light-mode .gh-l1 { background: rgba(180,35,59,0.30); }
+    body.light-mode .gh-l2 { background: rgba(180,35,59,0.55); }
+    body.light-mode .gh-l3 { background: rgba(180,35,59,0.78); }
+    body.light-mode .gh-l4 { background: rgba(180,35,59,1); }
     .rec-list { display: flex; flex-direction: column; gap: 0.6rem; padding-right: 0.25rem; }
     .rec-item { border-left: 2px solid rgba(255,59,77,0.4); padding-left: 0.85rem; }
     .rec-quote { color: var(--white); font-size: 0.78rem; line-height: 1.55; font-style: italic; margin-bottom: 0.3rem; opacity: 0.75; }
@@ -2309,6 +2330,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
                  src="https://ghchart.rshah.org/B4233B/ashutosh8950"
                  alt="Ashutosh Gupta GitHub contribution graph"
                  loading="lazy" />
+              <div id="gh-contrib" class="gh-contrib" hidden></div>
           </div>
           <a class="gh-activity-link" href="https://github.com/ashutosh8950" target="_blank" rel="noopener noreferrer">View full activity on GitHub →</a>
         </div>
@@ -3298,6 +3320,132 @@ Open to Applied ML / Computer Vision / AI Engineer roles
 
     updateActivity();
   })();
+  </script>
+  <script>
+    (function () {
+      const cacheKey = 'github-contrib-cache';
+      const cacheDuration = 30 * 60 * 1000;
+
+      function isValidData(data) {
+        return Boolean(data && Array.isArray(data.contributions) && data.contributions.length >= 300 && data.contributions.every(function (entry) {
+          if (!entry || typeof entry.date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(entry.date) || !Number.isInteger(entry.count) || entry.count < 0 || !Number.isInteger(entry.level) || entry.level < 0 || entry.level > 4) return false;
+          const date = new Date(entry.date + 'T00:00:00Z');
+          return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === entry.date;
+        }));
+      }
+
+      async function renderContributions() {
+        try {
+          let data = null;
+          const now = Date.now();
+          const cachedValue = sessionStorage.getItem(cacheKey);
+          if (cachedValue) {
+            try {
+              const cached = JSON.parse(cachedValue);
+              const age = now - cached.cachedAt;
+              if (Number.isFinite(cached.cachedAt) && age >= 0 && age < cacheDuration && isValidData(cached.data)) data = cached.data;
+            } catch (error) { }
+          }
+
+          if (!data) {
+            const response = await fetch('https://github-contributions-api.jogruber.de/v4/ashutosh8950?y=last');
+            if (!response.ok) return;
+            const fetchedData = await response.json();
+            if (!isValidData(fetchedData)) return;
+            data = fetchedData;
+            sessionStorage.setItem(cacheKey, JSON.stringify({ cachedAt: now, data: data }));
+          }
+
+          const container = document.getElementById('gh-contrib');
+          const image = document.querySelector('.gh-graph-wrap .github-graph');
+          if (!container || !image) return;
+
+          const contributions = data.contributions;
+          const firstDate = new Date(contributions[0].date + 'T00:00:00Z');
+          const firstDay = firstDate.getUTCDay();
+          const columns = Math.ceil((firstDay + contributions.length) / 7);
+          const content = document.createElement('div');
+
+          if (data.total && Number.isInteger(data.total.lastYear) && data.total.lastYear >= 0) {
+            const total = document.createElement('div');
+            total.setAttribute('class', 'gh-contrib-total');
+            total.textContent = data.total.lastYear + ' public contribution' + (data.total.lastYear === 1 ? '' : 's') + ' in the last year';
+            content.appendChild(total);
+          }
+
+          const monthRow = document.createElement('div');
+          monthRow.setAttribute('class', 'gh-contrib-months');
+          const monthLabels = new Array(columns).fill('');
+          let previousMonth = '';
+          let previousLabelColumn = -4;
+          contributions.forEach(function (entry, index) {
+            const date = new Date(entry.date + 'T00:00:00Z');
+            const month = entry.date.slice(0, 7);
+            const column = Math.floor((firstDay + index) / 7);
+            if (month !== previousMonth) {
+              if (column - previousLabelColumn >= 3) {
+                monthLabels[column] = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' });
+                previousLabelColumn = column;
+              }
+              previousMonth = month;
+            }
+          });
+          monthLabels.forEach(function (label) {
+            const month = document.createElement('span');
+            month.textContent = label;
+            monthRow.appendChild(month);
+          });
+          content.appendChild(monthRow);
+
+          const grid = document.createElement('div');
+          grid.setAttribute('class', 'gh-contrib-grid');
+          for (let index = 0; index < firstDay; index++) {
+            const paddingCell = document.createElement('span');
+            paddingCell.setAttribute('class', 'gh-contrib-cell gh-l0 gh-contrib-pad');
+            paddingCell.setAttribute('aria-hidden', 'true');
+            grid.appendChild(paddingCell);
+          }
+          contributions.forEach(function (entry) {
+            const cell = document.createElement('span');
+            const date = new Date(entry.date + 'T00:00:00Z');
+            const dateLabel = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+            let title = 'No contributions on ' + dateLabel;
+            if (entry.count > 0) title = entry.count + ' contribution' + (entry.count === 1 ? '' : 's') + ' on ' + dateLabel;
+            cell.setAttribute('class', 'gh-contrib-cell gh-l' + entry.level);
+            cell.setAttribute('aria-hidden', 'true');
+            cell.setAttribute('title', title);
+            grid.appendChild(cell);
+          });
+          content.appendChild(grid);
+
+          const legend = document.createElement('div');
+          legend.setAttribute('class', 'gh-contrib-legend');
+          const less = document.createElement('span');
+          less.textContent = 'Less';
+          legend.appendChild(less);
+          for (let level = 0; level <= 4; level++) {
+            const legendCell = document.createElement('span');
+            legendCell.setAttribute('class', 'gh-contrib-cell gh-l' + level);
+            legendCell.setAttribute('aria-hidden', 'true');
+            legend.appendChild(legendCell);
+          }
+          const more = document.createElement('span');
+          more.textContent = 'More';
+          legend.appendChild(more);
+          content.appendChild(legend);
+
+          container.style.setProperty('--cols', columns);
+          container.replaceChildren(...content.childNodes);
+          container.setAttribute('role', 'img');
+          container.setAttribute('aria-label', 'GitHub contribution graph');
+          container.removeAttribute('hidden');
+          image.style.display = 'none';
+          image.parentElement.classList.add('gh-has-contrib');
+        } catch (error) { }
+      }
+
+      renderContributions();
+    })();
   </script>
 </body>
 </html>
