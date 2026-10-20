@@ -7,13 +7,13 @@
   <meta name="description" content="Ashutosh Gupta — Applied AI/ML Engineer building OCR pipelines, computer vision workflows, FastAPI backends, ML systems, document image analysis, and deployed AI applications." />
   <meta name="keywords" content="Ashutosh Gupta, Applied AI Engineer, ML Engineer, Computer Vision, OCR, FastAPI, Python, Portfolio, Thapar Institute, PyTorch, Scikit-learn" />
   <meta name="author" content="Ashutosh Gupta" />
-  <meta name="theme-color" content="#050508" />
+  <meta name="theme-color" content="#0A0A0C" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph: LinkedIn, Slack, WhatsApp, Facebook -->
   <meta property="og:title" content="Ashutosh Gupta — Applied AI/ML Engineer" />
   <meta property="og:description" content="Building applied AI/ML systems: OCR pipelines, computer vision workflows, FastAPI backends, model evaluation, and deployed ML applications." />
-  <meta property="og:image" content="https://ashutosh8950.github.io/Portfolio/assets/social-preview-cyan.png" />
+  <meta property="og:image" content="https://ashutosh8950.github.io/Portfolio/assets/social-preview-red.png" />
   <meta property="og:url" content="https://ashutosh8950.github.io/Portfolio/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ashutosh Gupta Portfolio" />
@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ashutosh Gupta — Applied AI/ML Engineer" />
   <meta name="twitter:description" content="Applied AI/ML portfolio: OCR pipelines, computer vision, FastAPI backends, model evaluation, and deployed ML applications." />
-  <meta name="twitter:image" content="https://ashutosh8950.github.io/Portfolio/assets/social-preview-cyan.png" />
+  <meta name="twitter:image" content="https://ashutosh8950.github.io/Portfolio/assets/social-preview-red.png" />
   <meta name="twitter:creator" content="@ashutosh8950" />
 
   <link rel="canonical" href="https://ashutosh8950.github.io/Portfolio/" />
@@ -64,44 +64,49 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #050505;
-      --bg2: #121216;
-      --bg3: #1A1A22;
-      --surface: #121216;
-      --surface2: #1A1A22;
-      --border: #2A2A35;
-      --border2: #3A3A48;
-      --cyan: #00F0FF;
-      --cyan-dim: rgba(0,240,255,0.12);
-      --cyan-glow: rgba(0,240,255,0.25);
-      --green: #30A46C;
-      --white: #FFFFFF;
-      --muted: #A0A0B0;
-      --text: #FFFFFF;
-      --display: 'Rajdhani', sans-serif;
+      --bg: #08050F;
+      --bg2: #100A1C;
+      --bg3: #171026;
+      --surface: #120C20;
+      --surface2: #201135;
+      --border: rgba(168,85,247,0.16);
+      --border2: rgba(232,121,249,0.32);
+      --cyan: #E879F9;
+      --cyan-dim: rgba(168,85,247,0.16);
+      --cyan-glow: rgba(168,85,247,0.36);
+      --violet: #7C3AED;
+      --violet-dim: rgba(124,58,237,0.16);
+      --violet-glow: rgba(124,58,237,0.42);
+      --white: #F5F5F5;
+      --muted: #A1A1AA;
+      --text: #E4E4E7;
+      --display: 'Syne', sans-serif;
       --body: 'Space Grotesk', sans-serif;
       --mono: 'JetBrains Mono', monospace;
     }
 
     body.light-mode {
-      --bg: #EEF2F7;
-      --bg2: #E1E8F0;
-      --bg3: #D4DEE9;
-      --surface: #F9FBFD;
-      --surface2: #E8EEF5;
-      --border: #C1CCD9;
-      --border2: #8798AB;
-      --cyan: #008EA3;
-      --cyan-dim: rgba(0,142,163,0.10);
-      --green: #237A50;
-      --white: #17212D;
-      --muted: #526174;
-      --text: #243244;
+      --bg: #FAF7FF;
+      --bg2: #F3ECFF;
+      --bg3: #EDE2FF;
+      --surface: #FFFFFF;
+      --surface2: #FFF0F2;
+      --border: rgba(91, 33, 182, 0.14);
+      --border2: rgba(124, 58, 237, 0.28);
+      --cyan: #A21CAF;
+      --cyan-dim: rgba(168,85,247, 0.10);
+      --cyan-glow: rgba(168,85,247, 0.22);
+      --violet: #6D28D9;
+      --violet-dim: rgba(109,40,217, 0.10);
+      --violet-glow: rgba(109,40,217, 0.18);
+      --white: #24133A;
+      --muted: #5D4B72;
+      --text: #38234F;
     }
 
     html { scroll-behavior: smooth; scroll-padding-top: 86px; }
@@ -115,7 +120,7 @@
       height: 2px;
       z-index: 1001;
       pointer-events: none;
-    background: linear-gradient(90deg, var(--cyan), var(--white));
+      background: linear-gradient(90deg, var(--cyan), #E879F9);
       box-shadow: 0 0 12px var(--cyan-glow);
       transform-origin: left center;
       transition: width 0.08s linear;
@@ -162,7 +167,7 @@
     /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--cyan), var(--white)); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb { background: var(--violet); border-radius: 2px; }
 
     /* ── NAV ── */
     nav {
@@ -237,8 +242,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(0,240,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,240,255,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(168,85,247,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168,85,247,0.04) 1px, transparent 1px);
       background-size: 60px 60px;
       animation: gridShift 20s linear infinite;
       opacity: 0.72;
@@ -258,7 +263,7 @@
     }
     .blob-1 {
       width: 500px; height: 500px;
-    background: var(--cyan);
+      background: var(--violet);
       top: -100px; left: -100px;
       animation: blobFloat 8s ease-in-out infinite;
     }
@@ -286,8 +291,8 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.4rem 1rem;
-      background: rgba(0,240,255,0.08);
-      border: 1px solid rgba(0,240,255,0.2);
+      background: rgba(168,85,247,0.08);
+      border: 1px solid rgba(168,85,247,0.2);
       border-radius: 100px;
       font-family: var(--mono);
       font-size: 0.75rem;
@@ -321,6 +326,13 @@
       display: block;
       -webkit-text-stroke: 1.5px var(--cyan);
       color: transparent;
+    }
+    .hero-name:hover { animation: cyberGlitch 0.42s steps(2, end); }
+    @keyframes cyberGlitch {
+      0%, 100% { text-shadow: none; transform: skewX(0); }
+      25% { text-shadow: -3px 0 var(--violet), 3px 0 var(--white); transform: skewX(-2deg); }
+      50% { text-shadow: 3px 0 var(--cyan), -3px 0 var(--white); transform: translateX(2px); }
+      75% { text-shadow: -2px 0 var(--cyan), 2px 0 var(--violet); transform: skewX(1deg); }
     }
 
     .hero-tagline {
@@ -386,7 +398,7 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); background: var(--cyan-dim); transform: translateY(-2px); }
+    .btn-secondary:hover { border-color: var(--violet); color: var(--cyan); background: var(--violet-dim); transform: translateY(-2px); }
 
     .hero-stats {
       display: flex;
@@ -540,7 +552,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 2px;
-    background: linear-gradient(90deg, var(--cyan), var(--white));
+      background: linear-gradient(90deg, var(--violet), var(--cyan));
     }
     .about-card-title {
       font-family: var(--display);
@@ -581,7 +593,7 @@
     .approach-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.8rem; margin-top: 3rem; }
     .approach-card { position: relative; min-height: 190px; padding: 1.35rem; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
     .approach-card::before { content: ''; position: absolute; top: 0; left: 1.35rem; right: 1.35rem; height: 1px; background: linear-gradient(90deg, transparent, var(--cyan), transparent); opacity: 0.7; }
-    .approach-card:hover { transform: translateY(-5px); border-color: var(--cyan); box-shadow: 0 18px 44px var(--cyan-glow); }
+    .approach-card:hover { transform: translateY(-5px); border-color: var(--cyan); box-shadow: 0 18px 44px rgba(168,85,247,0.09); }
     .approach-number { color: var(--cyan); font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; }
     .approach-card h3 { color: var(--white); font-family: var(--display); font-size: 0.98rem; margin: 1.2rem 0 0.55rem; }
     .approach-card p { color: var(--muted); font-size: 0.8rem; line-height: 1.65; }
@@ -610,11 +622,11 @@
       content: '';
       position: absolute;
       inset: 0;
-    background: linear-gradient(135deg, var(--cyan-dim), transparent);
+      background: linear-gradient(135deg, var(--violet-dim), transparent);
       opacity: 0;
       transition: opacity 0.3s;
     }
-    .skill-card:hover { transform: translateY(-4px); border-color: var(--cyan); box-shadow: 0 20px 60px rgba(0,240,255,0.15); }
+    .skill-card:hover { transform: translateY(-4px); border-color: var(--violet); box-shadow: 0 20px 60px rgba(124,58,237,0.15); }
     .skill-card:hover::after { opacity: 1; }
     .skill-card-icon {
       font-size: 1.8rem;
@@ -662,8 +674,8 @@
       --tilt-y: 0deg;
       --lift: 0px;
     }
-    .project-card:hover { transform: translateY(-6px); border-color: var(--cyan); box-shadow: 0 25px 60px var(--cyan-glow); }
-    .project-card:focus-within { border-color: var(--cyan); box-shadow: 0 18px 45px var(--cyan-glow); }
+    .project-card:hover { transform: translateY(-6px); border-color: var(--cyan); box-shadow: 0 25px 60px rgba(168,85,247,0.1); }
+    .project-card:focus-within { border-color: var(--cyan); box-shadow: 0 18px 45px rgba(168,85,247,0.08); }
 
     .project-header {
       padding: 2rem 2rem 0;
@@ -732,19 +744,19 @@
       font-size: 0.7rem;
     }
 
-    .exp-badge { display: inline-block; margin-top: 0.5rem; font-size: 0.68rem; color: var(--cyan); background: var(--cyan-dim); border: 1px solid var(--border2); border-radius: 20px; padding: 0.15rem 0.6rem; letter-spacing: 0.04em; font-family: var(--mono); }
+    .exp-badge { display: inline-block; margin-top: 0.5rem; font-size: 0.68rem; color: #A855F7; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); border-radius: 20px; padding: 0.15rem 0.6rem; letter-spacing: 0.04em; font-family: var(--mono); }
     .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
     .exp-role { color: var(--cyan); font-family: var(--display); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.15rem; }
     .exp-company { font-size: 1.05rem; margin-bottom: 0 !important; }
-    .exp-location { font-size: 0.75rem; color: var(--muted); font-family: var(--mono); background: rgba(0,240,255,0.07); border: 1px solid var(--border); border-radius: 6px; padding: 0.2rem 0.6rem; white-space: nowrap; }
+    .exp-location { font-size: 0.75rem; color: var(--muted); font-family: var(--mono); background: rgba(255,82,96,0.07); border: 1px solid var(--border); border-radius: 6px; padding: 0.2rem 0.6rem; white-space: nowrap; }
     .exp-location a { color: var(--cyan); text-decoration: none; }
     .exp-location a:hover { text-decoration: underline; }
     .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
-    .exp-tag { font-size: 0.7rem; font-family: var(--mono); color: var(--cyan); background: var(--cyan-dim); border: 1px solid var(--border2); border-radius: 4px; padding: 0.2rem 0.55rem; letter-spacing: 0.03em; }
+    .exp-tag { font-size: 0.7rem; font-family: var(--mono); color: var(--cyan); background: rgba(168,85,247,0.06); border: 1px solid rgba(168,85,247,0.15); border-radius: 4px; padding: 0.2rem 0.55rem; letter-spacing: 0.03em; }
     .project-highlights strong { color: var(--white); font-weight: 600; }
-    body.light-mode .exp-badge { background: rgba(180,35,59,0.08); }
-    body.light-mode .exp-tag { background: rgba(180,35,59,0.06); }
-    body.light-mode .exp-location { background: rgba(180,35,59,0.05); }
+    body.light-mode .exp-badge { background: rgba(109,40,217,0.08); }
+    body.light-mode .exp-tag { background: rgba(109,40,217,0.06); }
+    body.light-mode .exp-location { background: rgba(109,40,217,0.05); }
 
     .project-footer {
       padding: 1.2rem 2rem;
@@ -755,12 +767,12 @@
     }
     .tech-tag {
       padding: 0.2rem 0.6rem;
-    background: var(--cyan-dim);
-      border: 1px solid var(--border2);
+      background: var(--violet-dim);
+      border: 1px solid rgba(124,58,237,0.25);
       border-radius: 4px;
       font-family: var(--mono);
       font-size: 0.65rem;
-      color: var(--cyan);
+      color: #E879F9;
     }
 
     .project-badge {
@@ -768,8 +780,8 @@
       align-items: center;
       gap: 0.3rem;
       padding: 0.2rem 0.6rem;
-      background: var(--cyan-dim);
-      border: 1px solid var(--border2);
+      background: rgba(168,85,247,0.1);
+      border: 1px solid rgba(168,85,247,0.2);
       border-radius: 100px;
       font-family: var(--mono);
       font-size: 0.65rem;
@@ -824,11 +836,11 @@
     .edu-grade {
       font-family: var(--mono);
       font-size: 0.78rem;
-    color: var(--cyan);
-    background: var(--cyan-dim);
+      color: var(--violet);
+      background: var(--violet-dim);
       padding: 0.25rem 0.75rem;
       border-radius: 100px;
-      border: 1px solid var(--border2);
+      border: 1px solid rgba(124,58,237,0.25);
     }
 
     /* ── CERTIFICATIONS ── */
@@ -850,7 +862,7 @@
       text-decoration: none;
       transition: all 0.3s;
     }
-    .cert-card:hover { border-color: var(--cyan); transform: translateY(-3px); box-shadow: 0 12px 40px var(--cyan-glow); }
+    .cert-card:hover { border-color: var(--cyan); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(168,85,247,0.1); }
     .cert-icon {
       width: 44px; height: 44px;
       border-radius: 10px;
@@ -898,7 +910,7 @@
       content: '';
       position: absolute;
       inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, var(--cyan-dim), transparent 70%);
+      background: radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.15), transparent 70%);
       pointer-events: none;
     }
     .contact-card p {
@@ -1025,11 +1037,11 @@
       position: relative;
       overflow: hidden;
     }
-    .avatar-card::before { content: ''; position: absolute; inset: -40%; background: conic-gradient(from 90deg, transparent, var(--cyan-dim), var(--cyan-dim), transparent); animation: spinSlow 10s linear infinite; }
+    .avatar-card::before { content: ''; position: absolute; inset: -40%; background: conic-gradient(from 90deg, transparent, var(--cyan-dim), var(--violet-dim), transparent); animation: spinSlow 10s linear infinite; }
     @keyframes spinSlow { to { transform: rotate(360deg); } }
     .avatar-inner { position: relative; z-index: 1; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; border-radius: 20px; background: rgba(10,10,12,0.62); border: 1px solid var(--border); padding: 2rem 1.2rem; backdrop-filter: blur(12px); }
     body.light-mode .avatar-inner { background: rgba(255,255,255,0.75); }
-    .avatar-face { width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-size: 4rem; font-weight: 800; color: var(--bg); background: linear-gradient(135deg, var(--cyan), var(--white)); border: 4px solid rgba(255,255,255,0.18); box-shadow: 0 0 45px var(--cyan-glow); object-fit: cover; }
+    .avatar-face { width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-size: 4rem; font-weight: 800; color: var(--bg); background: linear-gradient(135deg, var(--cyan), #E879F9); border: 4px solid rgba(255,255,255,0.18); box-shadow: 0 0 45px var(--cyan-glow); object-fit: cover; }
     .avatar-caption { text-align: center; }
     .avatar-caption strong { color: var(--white); font-family: var(--display); font-size: 1.05rem; }
     .avatar-caption span { display: block; color: var(--muted); font-family: var(--mono); font-size: 0.72rem; margin-top: 0.35rem; }
@@ -1059,11 +1071,11 @@
     .now-card p, .proof-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
     .github-graph { margin-top: 1.2rem; width: 100%; max-width: 760px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); padding: 0.5rem; }
     .proof-card { transition: border-color 0.3s ease, transform 0.3s ease; }
-    .proof-card:hover { border-color: var(--cyan); transform: translateY(-3px); }
+    .proof-card:hover { border-color: rgba(168,85,247,0.35); transform: translateY(-3px); }
     .gh-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem; }
     .proof-updated { color: var(--cyan) !important; font-family: var(--mono); font-size: 0.66rem !important; letter-spacing: 0.04em; margin-top: -0.35rem; margin-bottom: 0.8rem !important; }
-    .gh-stat { background: var(--cyan-dim); border: 1px solid var(--border2); border-radius: 8px; padding: 0.6rem 0.8rem; }
-    .gh-stat-val { color: var(--cyan); font-size: 1.2rem; font-weight: 800; display: block; }
+    .gh-stat { background: rgba(168,85,247,0.06); border: 1px solid rgba(168,85,247,0.12); border-radius: 8px; padding: 0.6rem 0.8rem; }
+    .gh-stat-val { color: var(--cyan, #A855F7); font-size: 1.2rem; font-weight: 800; display: block; }
     .gh-stat-lbl { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; }
     .gh-recent-wrap { margin: 1rem 0; }
     .gh-recent-title { color: var(--white); font-family: var(--display); font-size: 0.82rem; margin-bottom: 0.5rem; }
@@ -1073,8 +1085,8 @@
     .gh-recent a:hover, .gh-activity-link:hover { text-decoration: underline; }
     .gh-recent span { color: var(--muted); font-family: var(--mono); font-size: 0.64rem; white-space: nowrap; }
     .gh-activity-link { display: inline-block; margin-top: 0.6rem; color: var(--cyan); font-family: var(--mono); font-size: 0.68rem; text-decoration: none; }
-    .gh-graph-wrap { border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem; background: rgba(0,0,0,0.2); overflow: hidden; }
-    .gh-graph-wrap img { width: 100%; border-radius: 6px; display: block; filter: brightness(2.2) contrast(1.5) saturate(1.8) !important; }
+    .gh-graph-wrap { border: 0; border-radius: 8px; padding: 0; background: transparent; overflow: hidden; }
+    .gh-graph-wrap img { width: 100%; border-radius: 6px; display: block; }
     .gh-graph-wrap.gh-has-contrib { border: 0; padding: 0; background: transparent; }
     .gh-contrib { margin-top: 1.2rem; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); padding: 0.75rem; width: 100%; box-sizing: border-box; min-width: 0; overflow: hidden; }
     .gh-contrib-total { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); margin-bottom: 0.6rem; }
@@ -1085,39 +1097,34 @@
     .gh-contrib-cell[title]:hover { outline: 1px solid var(--cyan); }
     .gh-contrib-pad { visibility: hidden; }
     .gh-l0 { background: rgba(255,255,255,0.07); }
-    .gh-l1 { background: rgba(0,240,255,0.30); }
-    .gh-l2 { background: rgba(0,240,255,0.55); }
-    .gh-l3 { background: rgba(0,240,255,0.78); }
-    .gh-l4 { background: rgba(0,240,255,1); }
+    .gh-l1 { background: rgba(168,85,247,0.30); }
+    .gh-l2 { background: rgba(168,85,247,0.55); }
+    .gh-l3 { background: rgba(168,85,247,0.78); }
+    .gh-l4 { background: rgba(232,121,249,1); }
     .gh-contrib-legend { display: flex; align-items: center; justify-content: flex-end; gap: 0.3rem; margin-top: 0.6rem; font-family: var(--mono); font-size: 0.58rem; color: var(--muted); }
     .gh-contrib-legend .gh-contrib-cell { width: 0.55rem; height: 0.55rem; flex: 0 0 0.55rem; }
-    body.light-mode .gh-l0 { background: rgba(0,0,0,0.08); }
-    body.light-mode .gh-l1 { background: rgba(180,35,59,0.30); }
-    body.light-mode .gh-l2 { background: rgba(180,35,59,0.55); }
-    body.light-mode .gh-l3 { background: rgba(180,35,59,0.78); }
-    body.light-mode .gh-l4 { background: rgba(180,35,59,1); }
     .rec-list { display: flex; flex-direction: column; gap: 0.6rem; padding-right: 0.25rem; }
-    .rec-item { border-left: 2px solid var(--cyan); padding-left: 0.85rem; }
+    .rec-item { border-left: 2px solid rgba(168,85,247,0.4); padding-left: 0.85rem; }
     .rec-quote { color: var(--white); font-size: 0.78rem; line-height: 1.55; font-style: italic; margin-bottom: 0.3rem; opacity: 0.75; }
     .rec-author { display: flex; align-items: center; gap: 0.5rem; }
-    .rec-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--cyan-dim); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 0.6rem; font-weight: 700; flex-shrink: 0; }
+    .rec-avatar { width: 26px; height: 26px; border-radius: 50%; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); display: flex; align-items: center; justify-content: center; color: var(--cyan, #A855F7); font-size: 0.6rem; font-weight: 700; flex-shrink: 0; }
     .rec-name { color: var(--white); font-size: 0.72rem; font-weight: 600; opacity: 0.85; }
     .rec-role { color: var(--muted); font-size: 0.68rem; }
     .rec-coming { display: flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.72rem; margin-top: 0.6rem; border-top: 1px solid var(--border); padding-top: 0.6rem; }
-    .rec-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); display: inline-block; flex-shrink: 0; }
+    .rec-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(168,85,247,0.3); display: inline-block; flex-shrink: 0; }
     .writing-list { display: flex; flex-direction: column; gap: 0.5rem; }
-    .writing-item { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.65rem; border-radius: 8px; border: 1px solid var(--border); background: rgba(0,240,255,0.03); transition: border-color 0.3s ease, background 0.3s ease; cursor: pointer; }
-    .writing-item:hover { border-color: var(--cyan); background: var(--cyan-dim); }
-    .writing-icon { color: var(--cyan); font-size: 0.9rem; margin-top: 2px; flex-shrink: 0; }
+    .writing-item { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.65rem; border-radius: 8px; border: 1px solid var(--border); background: rgba(168,85,247,0.03); transition: border-color 0.3s ease, background 0.3s ease; cursor: pointer; }
+    .writing-item:hover { border-color: rgba(168,85,247,0.2); background: rgba(168,85,247,0.07); }
+    .writing-icon { color: var(--cyan, #A855F7); font-size: 0.9rem; margin-top: 2px; flex-shrink: 0; }
     .writing-title { color: var(--white); font-size: 0.78rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.2rem; opacity: 0.85; }
     .writing-meta { color: var(--muted); font-size: 0.68rem; }
-    .writing-arrow { color: var(--cyan); margin-left: auto; flex-shrink: 0; align-self: center; }
+    .writing-arrow { color: rgba(168,85,247,0.4); margin-left: auto; flex-shrink: 0; align-self: center; }
     .writing-cta { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border); text-align: right; }
-    .writing-cta a { color: var(--cyan); font-size: 0.75rem; text-decoration: none; letter-spacing: 0.04em; }
+    .writing-cta a { color: var(--cyan, #A855F7); font-size: 0.75rem; text-decoration: none; letter-spacing: 0.04em; }
     .writing-cta a:hover { text-decoration: underline; }
-    body.light-mode .gh-stat { background: rgba(180,35,59,0.06); }
+    body.light-mode .gh-stat { background: rgba(109,40,217,0.06); }
     body.light-mode .rec-quote { color: var(--white); }
-    body.light-mode .writing-item { background: rgba(180,35,59,0.03); }
+    body.light-mode .writing-item { background: rgba(109,40,217,0.03); }
     .timeline { margin-top: 3.5rem; display: grid; gap: 1rem; }
     .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; transition: all 0.25s ease; }
     .timeline-item:hover { transform: translateX(6px); border-color: var(--cyan); }
@@ -1126,7 +1133,7 @@
     .timeline-text { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
 
     /* ── VIRVES CASE STUDY ── */
-    .case-study { margin-top: 2rem; padding: 2rem; border: 1px solid var(--border2); border-radius: 18px; background: linear-gradient(135deg, var(--cyan-dim), rgba(255,255,255,0.03)), var(--surface); box-shadow: 0 20px 70px rgba(0,0,0,0.16); }
+    .case-study { margin-top: 2rem; padding: 2rem; border: 1px solid var(--border2); border-radius: 18px; background: linear-gradient(135deg, rgba(168,85,247,0.06), rgba(124,58,237,0.08)), var(--surface); box-shadow: 0 20px 70px rgba(0,0,0,0.16); }
     .case-study-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; margin-bottom: 1.6rem; }
     .case-study-kicker { color: var(--cyan); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.55rem; }
     .case-study-title { color: var(--white); font-family: var(--display); font-size: clamp(1.45rem, 3vw, 2.1rem); line-height: 1.15; }
@@ -1144,20 +1151,20 @@
     .case-study-arrow { color: var(--cyan); font-family: var(--mono); font-size: 0.75rem; }
     .case-study-outcomes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.55rem; margin-top: 1rem; }
     .case-study-outcome { display: flex; flex-direction: column; gap: 0.18rem; padding: 0.7rem 0.75rem; border: 1px solid var(--border); border-radius: 10px; background: rgba(10,10,12,0.22); opacity: 0.62; transition: opacity 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease; }
-    .case-study-outcome.is-active { opacity: 1; transform: translateY(-2px); border-color: currentColor; box-shadow: 0 10px 28px var(--cyan-glow); }
+    .case-study-outcome.is-active { opacity: 1; transform: translateY(-2px); border-color: currentColor; box-shadow: 0 10px 28px rgba(168,85,247,0.12); }
     .case-study-outcome strong { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.05em; }
     .case-study-outcome span:last-child { color: var(--muted); font-size: 0.66rem; line-height: 1.35; }
     .outcome-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 10px currentColor; margin-bottom: 0.15rem; }
     .case-study-outcome.accepted { color: #62D6A0; }
-    .case-study-outcome.rejected { color: var(--muted); }
-    .case-study-outcome.reupload { color: var(--white); }
-    .case-study-outcome.review { color: var(--cyan); }
+    .case-study-outcome.rejected { color: #FF6978; }
+    .case-study-outcome.reupload { color: #FFB86B; }
+    .case-study-outcome.review { color: #D59AFF; }
     body.light-mode .case-study-outcome { background: rgba(255,255,255,0.5); }
     .architecture-panel { margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid var(--border); }
     .architecture-kicker { color: var(--cyan); font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; }
     .architecture-flow { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 0.45rem; align-items: center; }
     .architecture-node { min-height: 86px; padding: 0.75rem; border: 1px solid var(--border); border-radius: 12px; background: rgba(10,10,12,0.3); color: var(--text); text-align: left; cursor: pointer; transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; }
-    .architecture-node:hover, .architecture-node:focus-visible, .architecture-node.is-selected { border-color: var(--cyan); background: var(--cyan-dim); color: var(--white); transform: translateY(-3px); box-shadow: 0 12px 28px var(--cyan-glow); }
+    .architecture-node:hover, .architecture-node:focus-visible, .architecture-node.is-selected { border-color: var(--cyan); background: var(--cyan-dim); color: var(--white); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(168,85,247,0.12); }
     .architecture-node small { display: block; color: var(--cyan); font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.35rem; }
     .architecture-node strong { display: block; font-family: var(--display); font-size: 0.78rem; line-height: 1.25; }
     .architecture-node span { display: block; color: var(--muted); font-size: 0.66rem; line-height: 1.35; margin-top: 0.3rem; }
@@ -1170,7 +1177,7 @@
     .architecture-branch { padding: 0.65rem 0.75rem; border: 1px dashed var(--border2); border-radius: 10px; color: var(--text); background: rgba(10,10,12,0.18); font-size: 0.68rem; line-height: 1.45; }
     .architecture-branch strong { color: var(--white); font-family: var(--display); font-size: 0.75rem; }
     .architecture-branch span { display: block; color: var(--muted); margin-top: 0.2rem; }
-    .architecture-detail { margin-top: 0.75rem; padding: 0.75rem 0.9rem; border-left: 2px solid var(--cyan); color: var(--muted); font-size: 0.76rem; line-height: 1.6; background: rgba(0,240,255,0.035); }
+    .architecture-detail { margin-top: 0.75rem; padding: 0.75rem 0.9rem; border-left: 2px solid var(--cyan); color: var(--muted); font-size: 0.76rem; line-height: 1.6; background: rgba(168,85,247,0.035); }
     body.light-mode .architecture-node, body.light-mode .architecture-branch { background: rgba(255,255,255,0.5); }
     .case-study-details { display: grid; gap: 0.6rem; margin-top: 1.2rem; }
     .case-study-details details { border-top: 1px solid var(--border); padding-top: 0.6rem; }
@@ -1180,7 +1187,7 @@
     body.light-mode .case-study-card { background: rgba(255,255,255,0.52); }
 
     /* ── PROJECT PREVIEWS / ACTIONS ── */
-    .project-preview { height: 130px; margin: 1.2rem 1.2rem 0; border-radius: 14px; border: 1px solid var(--border); background: radial-gradient(circle at 20% 20%, var(--cyan-dim), transparent 38%), radial-gradient(circle at 85% 80%, var(--cyan-dim), transparent 42%), var(--bg3); display: flex; align-items: end; justify-content: space-between; padding: 1rem; overflow: hidden; position: relative; }
+    .project-preview { height: 130px; margin: 1.2rem 1.2rem 0; border-radius: 14px; border: 1px solid var(--border); background: radial-gradient(circle at 20% 20%, var(--cyan-dim), transparent 38%), radial-gradient(circle at 85% 80%, var(--violet-dim), transparent 42%), var(--bg3); display: flex; align-items: end; justify-content: space-between; padding: 1rem; overflow: hidden; position: relative; }
     .project-preview::before { content: ''; position: absolute; inset: 18px; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; background-image: linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 22px 22px; opacity: 0.5; }
     .project-preview.image-preview { height: 170px; padding: 0; align-items: stretch; justify-content: stretch; background: var(--bg3); }
     .project-preview.image-preview::before { display: none; }
@@ -1189,9 +1196,9 @@
     .project-preview.truthscan-preview img { object-position: center center; transform: scale(1); }
     .project-card:hover .project-preview.truthscan-preview img { transform: scale(1.02); }
     .project-preview.image-preview::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(10,10,12,0.65)); pointer-events: none; }
-    .project-card.visible:hover .project-preview.image-preview::after { background: linear-gradient(180deg, transparent 0%, rgba(0,240,255,0.2) 49%, transparent 52%), linear-gradient(180deg, transparent 45%, rgba(5,5,5,0.65)); background-size: 100% 240%, 100% 100%; background-position: 0 -120%, 0 0; animation: previewScan 2.6s ease-in-out infinite; }
+    .project-card.visible:hover .project-preview.image-preview::after { background: linear-gradient(180deg, transparent 0%, rgba(168,85,247,0.2) 49%, transparent 52%), linear-gradient(180deg, transparent 45%, rgba(10,10,12,0.65)); background-size: 100% 240%, 100% 100%; background-position: 0 -120%, 0 0; animation: previewScan 2.6s ease-in-out infinite; }
     @keyframes previewScan { 0%, 100% { background-position: 0 -120%, 0 0; } 50% { background-position: 0 120%, 0 0; } }
-    .project-preview-caption { position: absolute; left: 0.85rem; bottom: 0.75rem; z-index: 1; display: inline-flex; gap: 0.45rem; align-items: center; padding: 0.35rem 0.65rem; border-radius: 999px; background: rgba(5,5,5,0.72); border: 1px solid var(--border2); color: var(--cyan); font-family: var(--mono); font-size: 0.66rem; backdrop-filter: blur(10px); }
+    .project-preview-caption { position: absolute; left: 0.85rem; bottom: 0.75rem; z-index: 1; display: inline-flex; gap: 0.45rem; align-items: center; padding: 0.35rem 0.65rem; border-radius: 999px; background: rgba(10,10,12,0.72); border: 1px solid rgba(168,85,247,0.18); color: var(--cyan); font-family: var(--mono); font-size: 0.66rem; backdrop-filter: blur(10px); }
     .preview-label, .preview-score { position: relative; z-index: 1; font-family: var(--mono); font-size: 0.72rem; }
     .preview-label { color: var(--white); }
     .preview-score { color: var(--cyan); }
@@ -1205,16 +1212,16 @@
     .project-case-point strong { display: block; color: var(--white); font-family: var(--display); font-size: 0.74rem; margin-bottom: 0.25rem; }
     .project-case-point span { display: block; color: var(--muted); font-size: 0.72rem; line-height: 1.55; }
     .project-case-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.45rem; margin-top: 0.85rem; }
-    .project-metric { padding: 0.55rem 0.6rem; border: 1px solid var(--border); border-radius: 8px; background: var(--cyan-dim); }
+    .project-metric { padding: 0.55rem 0.6rem; border: 1px solid var(--border); border-radius: 8px; background: rgba(168,85,247,0.04); }
     .project-metric strong { display: block; color: var(--cyan); font-family: var(--display); font-size: 0.9rem; }
     .project-metric span { display: block; color: var(--muted); font-family: var(--mono); font-size: 0.58rem; line-height: 1.35; margin-top: 0.15rem; text-transform: uppercase; letter-spacing: 0.04em; }
     .project-case-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; margin-top: 0.85rem; }
     .project-case-flow span { color: var(--text); font-family: var(--mono); font-size: 0.6rem; padding: 0.28rem 0.45rem; border-radius: 999px; border: 1px solid var(--border2); background: var(--surface); }
     .project-case-flow b { color: var(--cyan); font-family: var(--mono); font-size: 0.68rem; }
-    .project-case-note { margin-top: 0.85rem; padding: 0.75rem; border-left: 2px solid var(--cyan); border-radius: 0 8px 8px 0; background: var(--cyan-dim); color: var(--muted); font-size: 0.7rem; line-height: 1.55; }
+    .project-case-note { margin-top: 0.85rem; padding: 0.75rem; border-left: 2px solid var(--cyan); border-radius: 0 8px 8px 0; background: rgba(168,85,247,0.04); color: var(--muted); font-size: 0.7rem; line-height: 1.55; }
     .project-case-note strong { color: var(--cyan); font-weight: 700; }
     body.light-mode .project-case-point { background: rgba(255,255,255,0.5); }
-    body.light-mode .project-case-note { background: rgba(180,35,59,0.05); }
+    body.light-mode .project-case-note { background: rgba(109,40,217,0.05); }
     .projects-toggle-wrap { display: flex; justify-content: center; margin-top: 2rem; }
     .projects-toggle { display: inline-flex; align-items: center; gap: 0.55rem; color: var(--cyan); background: transparent; border: 1px solid var(--border2); border-radius: 8px; padding: 0.7rem 1rem; font-family: var(--mono); font-size: 0.72rem; cursor: pointer; transition: all 0.2s ease; }
     .projects-toggle:hover { background: var(--cyan-dim); border-color: var(--cyan); transform: translateY(-2px); }
@@ -1360,7 +1367,7 @@
       z-index: 100002;
       opacity: 0;
       transform: translate3d(-120px, -120px, 0) translate(-50%, -50%);
-      box-shadow: 0 0 14px var(--cyan), 0 0 28px var(--cyan-glow);
+      box-shadow: 0 0 14px var(--cyan), 0 0 28px rgba(168,85,247,0.45);
       transition: width 0.18s ease, height 0.18s ease, background 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
       mix-blend-mode: screen;
     }
@@ -1371,7 +1378,7 @@
       left: 0;
       width: 38px;
       height: 38px;
-      border: 1.4px solid var(--cyan);
+      border: 1.4px solid rgba(168,85,247,0.62);
       border-radius: 50%;
       z-index: 100001;
       opacity: 0;
@@ -1409,7 +1416,7 @@
       z-index: 99999;
       opacity: 0;
       transform: translate3d(-120px, -120px, 0) translate(-50%, -50%);
-      background: radial-gradient(circle, var(--cyan-dim) 0%, rgba(0,240,255,0.05) 28%, transparent 68%);
+      background: radial-gradient(circle, rgba(168,85,247,0.12) 0%, rgba(168,85,247,0.05) 28%, transparent 68%);
       filter: blur(2px);
       transition: width 0.25s ease, height 0.25s ease, opacity 0.18s ease, background 0.22s ease;
       mix-blend-mode: screen;
@@ -1437,7 +1444,7 @@
       opacity: 0;
       transform: translate3d(-120px, -120px, 0) translate(-50%, 28px);
       transition: opacity 0.16s ease, color 0.16s ease;
-      text-shadow: 0 0 12px var(--cyan-glow);
+      text-shadow: 0 0 12px rgba(168,85,247,0.65);
     }
 
     body.cursor-ready #cursor-dot,
@@ -1449,20 +1456,20 @@
     body.cursor-hover #cursor-dot {
       width: 11px;
       height: 11px;
-    background: var(--cyan);
-    box-shadow: 0 0 16px var(--cyan), 0 0 38px var(--cyan-glow);
+      background: var(--violet);
+      box-shadow: 0 0 16px var(--violet), 0 0 38px rgba(124,58,237,0.58);
     }
 
     body.cursor-hover #cursor-ring {
       width: 58px;
       height: 58px;
-      border-color: var(--cyan);
+      border-color: rgba(255,122,134,0.78);
     }
 
     body.cursor-hover #cursor-ring::before,
     body.cursor-hover #cursor-ring::after {
-      background: var(--cyan);
-      box-shadow: 0 0 12px var(--cyan);
+      background: #E879F9;
+      box-shadow: 0 0 12px #E879F9;
       transform: translate(-50%, -50%) rotate(0deg) translateX(29px);
     }
 
@@ -1473,13 +1480,13 @@
     body.cursor-hover #cursor-aura {
       width: 190px;
       height: 190px;
-      background: radial-gradient(circle, var(--cyan-dim) 0%, rgba(0,240,255,0.06) 34%, transparent 70%);
+      background: radial-gradient(circle, rgba(124,58,237,0.16) 0%, rgba(168,85,247,0.06) 34%, transparent 70%);
     }
 
     body.cursor-hover .cursor-label {
       opacity: 1;
-      color: var(--cyan);
-      text-shadow: 0 0 12px var(--cyan-glow);
+      color: #E879F9;
+      text-shadow: 0 0 12px rgba(255,122,134,0.72);
     }
 
     body.cursor-click #cursor-ring {
@@ -1494,140 +1501,6 @@
     body.cursor-out .cursor-label {
       opacity: 0 !important;
     }
-
-    /* PLAYER-ENGINEER VISUAL OVERRIDES */
-    h1, h2, h3, h4, h5, h6 { color: var(--white); }
-    .project-badge, .tech-tag, .exp-tag, .project-action, .project-case-study summary,
-    .section-eyebrow, .nav-links a, .stat-label, .timeline-year, .gh-stat-lbl {
-      font-family: var(--mono);
-    }
-    #scrollProgress { background: linear-gradient(90deg, var(--cyan), var(--white)); }
-    .hero-grid { background-image: linear-gradient(rgba(0,240,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,0.035) 1px, transparent 1px); }
-    .project-card, .approach-card, .skill-card, .cert-card, .now-card, .proof-card,
-    .timeline-item, .case-study-card, .project-case-point { border-color: var(--border); }
-    .project-card:hover, .project-card:focus-within, .approach-card:hover,
-    .skill-card:hover, .cert-card:hover, .proof-card:hover { border-color: var(--cyan); box-shadow: 0 20px 60px rgba(59,232,255,0.10); }
-    .project-preview { background: radial-gradient(circle at 20% 20%, var(--cyan-dim), transparent 38%), radial-gradient(circle at 85% 80%, var(--cyan-dim), transparent 42%), var(--bg3); }
-    .project-preview.image-preview::after { background: linear-gradient(180deg, transparent 45%, rgba(11,11,12,0.72)); }
-    .project-card.visible:hover .project-preview.image-preview::after { background: linear-gradient(180deg, transparent 0%, rgba(59,232,255,0.18) 49%, transparent 52%), linear-gradient(180deg, transparent 45%, rgba(11,11,12,0.72)); }
-    .avatar-face { background: linear-gradient(135deg, var(--cyan), var(--white)); }
-    .case-study { background: linear-gradient(135deg, var(--cyan-dim), rgba(255,255,255,0.03)), var(--surface); }
-    .project-badge { display: inline-flex; align-items: center; gap: 0.42rem; }
-    .status-dot { width: 0.45rem; height: 0.45rem; border-radius: 50%; display: inline-block; background: var(--green); box-shadow: 0 0 9px rgba(48,164,108,0.75); }
-    .live-badge { color: var(--green); background: rgba(48,164,108,0.10); border-color: rgba(48,164,108,0.28); }
-    .progress-badge { color: var(--muted); background: rgba(160,160,176,0.10); border-color: var(--border2); }
-    .progress-badge .status-dot { background: var(--white); box-shadow: 0 0 9px var(--cyan-glow); }
-    .project-action:hover, .project-link:hover, .contact-link:hover, .tag:hover { border-color: var(--cyan); color: var(--cyan); background: var(--cyan-dim); }
-    #projectsGrid > .project-card:nth-child(1) { order: 2; }
-    #projectsGrid > .project-card:nth-child(2) { order: 1; }
-    .gh-l1 { background: rgba(59,232,255,0.30); }
-    .gh-l2 { background: rgba(59,232,255,0.55); }
-    .gh-l3 { background: rgba(59,232,255,0.78); }
-    .gh-l4 { background: rgba(59,232,255,1); }
-    .btn-primary, .btn-secondary, .nav-cta {
-      clip-path: polygon(5% 0, 100% 0, 100% 76%, 95% 100%, 0 100%, 0 24%);
-      border-radius: 0;
-    }
-    .btn-primary { background: var(--cyan); color: var(--bg); box-shadow: inset 0 0 0 1px rgba(247,243,234,0.18), 0 0 22px var(--cyan-glow); }
-    .btn-primary:hover, .nav-cta:hover { background: var(--cyan) !important; color: var(--bg) !important; box-shadow: inset 0 0 0 1px rgba(247,243,234,0.28), 0 0 30px var(--cyan-glow); }
-    .btn-secondary { border-color: var(--cyan); color: var(--cyan); box-shadow: inset 0 0 0 1px var(--cyan-glow); }
-    .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); background: var(--cyan-dim); }
-    .project-card, .about-card, .avatar-card {
-      clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px);
-      box-shadow: inset 0 0 0 1px rgba(59,232,255,0.10), inset 0 0 34px rgba(59,232,255,0.035), 0 18px 44px rgba(0,0,0,0.18);
-    }
-    .project-card:hover, .about-card:hover, .avatar-card:hover { border-color: var(--cyan); box-shadow: inset 0 0 0 1px rgba(59,232,255,0.36), inset 0 0 34px rgba(59,232,255,0.08), 0 22px 58px rgba(59,232,255,0.12); }
-    .project-preview.image-preview::before {
-      display: block;
-      inset: 0;
-      z-index: 2;
-      border: 0;
-      border-radius: 0;
-      opacity: 0;
-      background-image: linear-gradient(90deg, transparent calc(50% - 1px), rgba(0,240,255,0.78) calc(50% - 1px), rgba(0,240,255,0.78) calc(50% + 1px), transparent calc(50% + 1px)), linear-gradient(0deg, transparent calc(50% - 1px), rgba(0,240,255,0.78) calc(50% - 1px), rgba(0,240,255,0.78) calc(50% + 1px), transparent calc(50% + 1px));
-      background-size: 100% 100%;
-      transition: opacity 0.25s ease;
-    }
-    .project-card:hover .project-preview.image-preview::before { opacity: 1; animation: reticlePulse 1.8s ease-in-out infinite; }
-    @keyframes reticlePulse { 0%, 100% { opacity: 0.45; transform: scale(0.94); } 50% { opacity: 1; transform: scale(1); } }
-    .hud-corners { position: relative; }
-    .hud-corners::before, .hud-corners::after {
-      content: '';
-      position: absolute;
-      width: 26px;
-      height: 26px;
-      z-index: 4;
-      pointer-events: none;
-      border-color: var(--cyan);
-      border-style: solid;
-      filter: drop-shadow(0 0 6px var(--cyan-glow));
-    }
-    .hud-corners::before { top: 9px; left: 9px; border-width: 2px 0 0 2px; }
-    .hud-corners::after { right: 9px; bottom: 9px; border-width: 0 2px 2px 0; border-color: var(--cyan); filter: drop-shadow(0 0 6px var(--cyan-glow)); }
-    h2.section-title { text-transform: uppercase; font-style: italic; transform: skewX(-5deg); letter-spacing: 0.015em; }
-    .nav-links a { text-transform: uppercase; }
-    .nav-links a:hover { text-shadow: 0 0 12px var(--cyan-glow); }
-    .status-dot { width: 0.48rem; height: 0.48rem; border-radius: 1px; animation: ping 1.6s ease-in-out infinite; }
-    @keyframes ping { 0%, 100% { box-shadow: 0 0 0 rgba(48,164,108,0.15), 0 0 7px currentColor; transform: scale(0.9); } 50% { box-shadow: 0 0 0 5px rgba(48,164,108,0.08), 0 0 16px currentColor; transform: scale(1.08); } }
-    .live-badge .status-dot { color: var(--green); }
-    .progress-badge .status-dot { color: var(--white); }
-    /* CYBERPUNK GAMING DASHBOARD THEME */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 999;
-      pointer-events: none;
-      opacity: 0.03;
-      background: repeating-linear-gradient(0deg, rgba(226,232,240,0.9) 0, rgba(226,232,240,0.9) 1px, transparent 1px, transparent 4px);
-      mix-blend-mode: screen;
-    }
-    h1, h2, h3, h4, h5, h6, .hero-name, .section-title { font-family: var(--display); font-weight: 700; letter-spacing: 0.02em; }
-    .hero-grid { background-image: linear-gradient(rgba(0,240,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,255,0.035) 1px, transparent 1px); }
-    .project-card, .skill-card, .about-card, .timeline-item, .proof-card, .avatar-card, .approach-card, .cert-card, .now-card {
-      background: rgba(13,13,20,0.70);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-    .project-card:hover, .skill-card:hover, .about-card:hover, .timeline-item:hover, .proof-card:hover, .avatar-card:hover, .approach-card:hover, .cert-card:hover, .now-card:hover {
-      border-color: var(--cyan);
-      box-shadow: 0 0 20px rgba(0,240,255,0.20), inset 0 0 18px rgba(0,240,255,0.05);
-    }
-    .btn-primary { background: var(--cyan); color: var(--bg); box-shadow: 0 0 20px var(--cyan-glow), inset 0 0 0 1px rgba(255,255,255,0.18); }
-    .btn-primary:hover, .nav-cta:hover { background: var(--cyan) !important; color: var(--bg) !important; box-shadow: 0 0 30px var(--cyan-glow); }
-    .btn-secondary { border-color: var(--cyan); color: var(--cyan); box-shadow: 0 0 14px rgba(0,240,255,0.12); }
-    .btn-secondary:hover { border-color: var(--cyan); color: var(--bg); background: var(--cyan); box-shadow: 0 0 24px rgba(0,240,255,0.32); }
-    .nav-cta { border-color: var(--cyan); }
-    .project-preview.image-preview::before {
-      background-image: linear-gradient(90deg, transparent calc(50% - 1px), rgba(0,240,255,0.86) calc(50% - 1px), rgba(0,240,255,0.86) calc(50% + 1px), transparent calc(50% + 1px)), linear-gradient(0deg, transparent calc(50% - 1px), rgba(0,240,255,0.86) calc(50% - 1px), rgba(0,240,255,0.86) calc(50% + 1px), transparent calc(50% + 1px));
-      filter: drop-shadow(0 0 8px rgba(0,240,255,0.65));
-    }
-    .project-card:hover .project-preview.image-preview::before { animation: reticlePulse 1.15s ease-in-out infinite; }
-    .project-preview.image-preview::after { background: linear-gradient(180deg, transparent 45%, rgba(5,5,8,0.76)); }
-    .project-card.visible:hover .project-preview.image-preview::after { background: linear-gradient(180deg, transparent 0%, rgba(0,240,255,0.22) 49%, transparent 52%), linear-gradient(180deg, transparent 45%, rgba(5,5,5,0.76)); }
-    body.light-mode nav { background: rgba(233,238,245,0.88); }
-    body.light-mode #about, body.light-mode #experience, body.light-mode #projects, body.light-mode #certs, body.light-mode #journey { background: rgba(221,229,239,0.78); }
-    body.light-mode #skills, body.light-mode #education, body.light-mode #contact, body.light-mode #now, body.light-mode #proof { background: rgba(233,238,245,0.78); }
-    body.light-mode .project-card, body.light-mode .skill-card, body.light-mode .about-card, body.light-mode .timeline-item, body.light-mode .proof-card, body.light-mode .avatar-card, body.light-mode .approach-card, body.light-mode .cert-card, body.light-mode .now-card { background: rgba(247,250,255,0.78); }
-    .status-dot { background: var(--green); }
-    .live-badge { color: var(--green); }
-    .progress-badge { color: var(--muted); }
-    .progress-badge .status-dot { background: var(--white); }
-    .hero-name:hover { animation: cyberGlitch 0.42s steps(2, end); }
-    @keyframes cyberGlitch {
-      0%, 100% { text-shadow: none; transform: skewX(0); }
-      25% { text-shadow: -3px 0 var(--cyan), 3px 0 var(--white); transform: skewX(-2deg); }
-      50% { text-shadow: 3px 0 var(--cyan), -3px 0 var(--white); transform: translateX(2px); }
-      75% { text-shadow: -2px 0 var(--white), 2px 0 var(--cyan); transform: skewX(2deg); }
-    }
-    #cursor-dot { background: var(--cyan); box-shadow: 0 0 12px var(--cyan), 0 0 28px var(--cyan-glow); }
-    #cursor-ring { border-color: rgba(59,232,255,0.62); }
-    body.cursor-hover #cursor-dot { background: var(--cyan); box-shadow: 0 0 16px var(--cyan), 0 0 38px var(--cyan-glow); }
-    body.cursor-hover #cursor-ring { border-color: var(--cyan); }
-    body.cursor-hover #cursor-ring::before, body.cursor-hover #cursor-ring::after { background: var(--cyan); box-shadow: 0 0 12px var(--cyan); }
-    body.cursor-hover #cursor-aura { background: radial-gradient(circle, var(--cyan-dim) 0%, rgba(0,240,255,0.06) 34%, transparent 70%); }
-    body.cursor-hover .cursor-label { color: var(--cyan); text-shadow: 0 0 12px var(--cyan-glow); }
 
     @media (pointer: coarse), (prefers-reduced-motion: reduce) {
       body.custom-cursor-enabled,
@@ -1717,7 +1590,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
 
       <div class="hero-stats">
         <div class="stat-item">
-          <span class="stat-num">5</span>
+          <span class="stat-num">6</span>
           <span class="stat-label">Featured Projects</span>
         </div>
         <div class="stat-item">
@@ -1736,7 +1609,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
     </div>
 
     <aside class="hero-visual" aria-label="Ashutosh Gupta profile avatar">
-<div class="avatar-card hud-corners">
+      <div class="avatar-card">
         <div class="avatar-inner">
           <img class="avatar-face" src="assets/AI.jpg" alt="Ashutosh Gupta professional profile photo" width="150" height="150" fetchpriority="high" decoding="async" />
           <div class="avatar-caption">
@@ -1792,7 +1665,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
         </div>
 
-<div class="about-card hud-corners reveal reveal-delay-2">
+        <div class="about-card reveal reveal-delay-2">
           <div class="about-card-title">Quick Info</div>
           <div class="detail-item">
             <span class="detail-icon">🎓</span>
@@ -1852,7 +1725,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
-<div class="section-eyebrow reveal">CAREER TIMELINE // MATCH HISTORY</div>
+      <div class="section-eyebrow reveal">Experience</div>
       <h2 class="section-title reveal">Applied AI in document workflows.</h2>
       <p class="section-sub reveal">Hands-on work across OCR pipelines, backend validation, and deployment-focused reliability.</p>
 
@@ -1871,9 +1744,9 @@ Open to Applied ML / Computer Vision / AI Engineer roles
               <div class="exp-location">Remote &middot; <a href="https://drive.google.com/file/d/1zNPHZZxacrnLfct-giRjf3FjCipIOEo_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Open Virves Software Solutions internship certificate">View Certificate</a></div>
             </div>
             <ul class="project-highlights">
-              <li>Built a FastAPI backend validating Aadhaar, PAN, and Driving License uploads using Tesseract-first hybrid OCR (EasyOCR fallback), OpenCV preprocessing, and explainable rule-based scoring.</li>
-              <li>Implemented document-type detection, number parsing, identity-field extraction, PAN holder-name matching, applicant tracking, manual-review APIs, and MongoDB/GridFS persistence.</li>
-              <li>Cut redundant OCR work via staged candidates, targeted field OCR, capped PAN OCR calls, and early exits; added pytest tests and synthetic benchmarks.</li>
+              <li>Built a <strong>FastAPI backend</strong> validating Aadhaar, PAN, and Driving License uploads using <strong>Tesseract-first hybrid OCR (EasyOCR fallback), OpenCV preprocessing, and explainable rule-based scoring</strong> with ACCEPTED, REJECTED, REUPLOAD_REQUIRED, and MANUAL_REVIEW outcomes.</li>
+              <li>Implemented document-type detection, Aadhaar/PAN/DL number parsing, Aadhaar and PAN identity-field extraction, PAN holder-name matching, applicant tracking, manual-review approval/rejection APIs, and <strong>MongoDB/GridFS persistence</strong>.</li>
+              <li>Optimized CPU-bound OCR through staged candidate generation, image resizing, rotation/crop deduplication, targeted field OCR, capped PAN OCR calls, and early exits; added pytest tests, synthetic-document benchmarks, and technical documentation.</li>
             </ul>
             <div class="exp-tags">
               <span class="exp-tag">Python</span>
@@ -2000,7 +1873,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <p>OCR failure modes, noisy document inputs, name matching, explainable rule-based scoring, MongoDB/GridFS persistence, manual-review workflows, API design, testing strategy, CPU tradeoffs, and future improvements.</p>
           </details>
         </div>
-        <p class="project-case-note"><strong>Data responsibility:</strong> This portfolio describes the validation workflow without exposing identity-document images, applicant records, or other sensitive personal data. This is a prototype validation workflow. It checks document type, layout, and field patterns, and does not verify authenticity or issuer records. The source code is not public because this was internship work.</p>
+        <p class="project-case-note"><strong>Data responsibility:</strong> This portfolio describes the validation workflow without exposing identity-document images, applicant records, or other sensitive personal data. This is a prototype validation workflow. It checks document type, layout, and field patterns, and does not verify authenticity or issuer records.</p>
       </div>
     </div>
   </section>
@@ -2008,8 +1881,8 @@ Open to Applied ML / Computer Vision / AI Engineer roles
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
-<div class="section-eyebrow reveal">What I Work With</div>
-<h2 class="section-title reveal">COMBAT LOADOUT // TECH STACK</h2>
+      <div class="section-eyebrow reveal">What I Work With</div>
+      <h2 class="section-title reveal">Tech Stack</h2>
       <p class="section-sub reveal">Tools and frameworks I use to build production-ready AI systems.</p>
 
       <div class="skills-grid">
@@ -2051,6 +1924,8 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="skill-pill">Ensemble Learning</span>
             <span class="skill-pill">Probability Calibration</span>
             <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill">TensorFlow</span>
+            <span class="skill-pill">Keras</span>
             <span class="skill-pill">spaCy</span>
             <span class="skill-pill">Gensim</span>
             <span class="skill-pill">DistilBERT</span>
@@ -2116,9 +1991,9 @@ Open to Applied ML / Computer Vision / AI Engineer roles
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-<div class="section-eyebrow reveal">What I've Built</div>
-<h2 class="section-title reveal">MISSION SELECT // FEATURED PROJECTS</h2>
-      <p class="section-sub reveal">Selected applied AI/ML projects with deployed demos, APIs, and measurable model outcomes. Demos run on free hosting, so the first load can take about a minute.</p>
+      <div class="section-eyebrow reveal">What I've Built</div>
+      <h2 class="section-title reveal">Featured Projects</h2>
+      <p class="section-sub reveal">Selected applied AI/ML projects with deployed demos, APIs, and measurable model outcomes.</p>
 
       <div class="projects-grid" id="projectsGrid">
 
@@ -2138,14 +2013,15 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="project-preview-caption">Live dashboard preview</span>
           </div>
           <div class="project-body">
-            <div class="project-badge live-badge"><span class="status-dot" aria-hidden="true"></span> Live</div>
+            <div class="project-badge">🟢 Live on Render</div>
             <h3 class="project-name">Resume Screener</h3>
-            <p class="project-desc">Built a resume-to-JD matcher using TF-IDF, Word2Vec, and keyword overlap scoring to generate match percentages. Integrated GPT-3.5 for personalized improvement suggestions via Streamlit.</p>
+            <p class="project-desc">Local semantic resume ↔ job-description matcher with requirement evidence, skill-gap analysis, optional Gemini suggestions, and batch workflows.</p>
             <ul class="project-highlights">
-              <li>TF-IDF + Word2Vec + keyword overlap weighted ensemble matching</li>
-              <li>PDF parsing via PyPDF2 with multi-page content extraction</li>
-              <li>GPT-3.5 generates 5 personalized resume improvement suggestions</li>
-              <li>Streamlit dashboard with skill donut charts & batch comparison</li>
+              <li>FastEmbed/ONNX semantic embeddings combined with TF-IDF, keyword overlap, and technical skill coverage</li>
+              <li>Validated text-based PDF extraction with pypdf, upload-size limits, and page-count limits</li>
+              <li>Requirement-level evidence tables classify strong, partial, and gap matches with rationale</li>
+              <li>Streamlit + Plotly dashboard supports single analysis, 2–6 job batch ranking, and bulk comparison of up to 10 resumes with protected CSV export</li>
+              <li>Memory-aware fallback scoring keeps the Render deployment resilient when local embeddings are unavailable; optional Gemini suggestions add structured improvement guidance</li>
             </ul>
             <div class="project-actions">
               <a href="https://ai-resume-screener-w6h3.onrender.com" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open live demo for Resume Screener">🟢 Live Demo</a>
@@ -2156,8 +2032,8 @@ Open to Applied ML / Computer Vision / AI Engineer roles
               <summary>Read technical case study</summary>
               <div class="project-case-grid">
                 <div class="project-case-point"><strong>Problem</strong><span>Recruiters and applicants need a faster way to compare resume content with a job description and identify meaningful gaps.</span></div>
-                <div class="project-case-point"><strong>Approach</strong><span>Combined TF-IDF, Word2Vec, and keyword overlap into a weighted matching workflow with PDF extraction and dashboard analytics.</span></div>
-                <div class="project-case-point"><strong>AI layer</strong><span>GPT-3.5 generates five targeted resume-improvement suggestions after the matching signals are calculated. The suggestions step needs your own OpenAI API key; match scoring runs without one.</span></div>
+                <div class="project-case-point"><strong>Approach</strong><span>Combines semantic embeddings, TF-IDF, keyword overlap, and technical skill coverage into a weighted matching workflow with requirement filtering, PDF extraction, and dashboard analytics.</span></div>
+                <div class="project-case-point"><strong>AI layer</strong><span>Rule-based suggestions work by default; an optional Gemini integration can enhance the structured advice after the matching signals and evidence gaps are calculated.</span></div>
                 <div class="project-case-point"><strong>Interview focus</strong><span>Similarity tradeoffs, feature weighting, PDF parsing failures, evaluation design, prompt reliability, and explainable recommendations.</span></div>
               </div>
             </details>
@@ -2165,9 +2041,17 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           <div class="project-footer">
             <span class="tech-tag">Python</span>
             <span class="tech-tag">Scikit-learn</span>
-            <span class="tech-tag">Gensim</span>
-            <span class="tech-tag">PyPDF2</span>
+            <span class="tech-tag">FastEmbed</span>
+            <span class="tech-tag">ONNX Runtime</span>
+            <span class="tech-tag">pypdf</span>
+            <span class="tech-tag">pandas</span>
             <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Plotly</span>
+            <span class="tech-tag">requests</span>
+            <span class="tech-tag">Gemini optional</span>
+            <span class="tech-tag">pytest</span>
+            <span class="tech-tag">Render</span>
+            <span class="tech-tag">GitHub Actions</span>
           </div>
         </div>
 
@@ -2188,9 +2072,9 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="project-preview-caption">Live TruthScan dashboard</span>
           </div>
           <div class="project-body">
-            <div class="project-badge live-badge"><span class="status-dot" aria-hidden="true"></span> Live</div>
+            <div class="project-badge">🟢 Deployed on Render</div>
             <h3 class="project-name">TruthScan — Fake News Detector</h3>
-            <p class="project-desc">Trained and calibrated a 5-model probability-averaging ensemble reaching 98.44% accuracy on a 3,653-article held-out set. Built an NLP pipeline with spaCy lemmatization and TF-IDF.</p>
+            <p class="project-desc">Deployed fake-news detection system using spaCy NLP preprocessing, bigram TF-IDF features, and a five-model calibrated probability ensemble evaluated on unseen articles.</p>
             <ul class="project-highlights">
               <li>Built a five-model calibrated ensemble from 24,353 labeled articles, using 20,700 records for training and 3,653 for held-out evaluation</li>
               <li>Achieved 98.44% held-out accuracy with a 0.013835 Brier score by averaging calibrated class probabilities</li>
@@ -2224,11 +2108,18 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             </details>
           </div>
           <div class="project-footer">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Scikit-learn</span>
             <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">TF-IDF</span>
+            <span class="tech-tag">Calibrated Ensemble</span>
+            <span class="tech-tag">scikit-learn</span>
             <span class="tech-tag">spaCy</span>
+            <span class="tech-tag">Pydantic</span>
+            <span class="tech-tag">SlowAPI</span>
+            <span class="tech-tag">pytest</span>
+            <span class="tech-tag">Uvicorn/Gunicorn</span>
             <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Hugging Face</span>
+            <span class="tech-tag">Render</span>
           </div>
         </div>
 
@@ -2248,13 +2139,13 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="project-preview-caption">Live dashboard preview</span>
           </div>
           <div class="project-body">
-            <div class="project-badge live-badge"><span class="status-dot" aria-hidden="true"></span> Live</div>
+            <div class="project-badge">🟢 Live on Render</div>
             <h3 class="project-name">ShieldAI Fraud Detection</h3>
-            <p class="project-desc">Trained a Random Forest model on 10,000 synthetic transactions, achieving 0.99 ROC-AUC. Handled class imbalance and built a Flask REST API with a JavaScript dashboard. Synthetic-data limitation explicitly documented.</p>
+            <p class="project-desc">Real-time transaction fraud detection with 97%+ accuracy, live dashboard with KPIs, and auto-severity alerts.</p>
             <ul class="project-highlights">
-              <li>Random Forest on 10K synthetic transactions (3% fraud); near-perfect scores reflect the synthetic data, not real-world performance</li>
+              <li>Random Forest on 10K transactions — 97%+ accuracy, 0.99 ROC-AUC</li>
               <li>StandardScaler + class-weight balancing for 3% fraud rate imbalance</li>
-              <li>Flask REST API (6 endpoints) with auto-severity alert persistence in SQLite</li>
+              <li>Flask REST API (5 endpoints) with auto-severity alert persistence in SQLite</li>
               <li>Live JS dashboard with Chart.js analytics and animated SVG risk gauge</li>
             </ul>
             <div class="project-actions">
@@ -2266,15 +2157,15 @@ Open to Applied ML / Computer Vision / AI Engineer roles
               <summary>Read technical case study</summary>
               <div class="project-case-grid">
                 <div class="project-case-point"><strong>Problem</strong><span>Fraud detection must surface suspicious transactions quickly while handling an imbalanced dataset where false negatives are costly.</span></div>
-                <div class="project-case-point"><strong>Modeling</strong><span>Used a Random Forest pipeline with StandardScaler and class-weight balancing, then evaluated performance with ROC-AUC alongside accuracy. Training data is a generated synthetic dataset, so the near-perfect scores demonstrate the pipeline rather than real-world fraud-detection performance.</span></div>
-                <div class="project-case-point"><strong>Product layer</strong><span>Exposed six Flask REST endpoints and persisted auto-severity alerts for a dashboard with KPIs, activity trends, and a risk gauge.</span></div>
+                <div class="project-case-point"><strong>Modeling</strong><span>Used a Random Forest pipeline with StandardScaler and class-weight balancing, then evaluated performance with ROC-AUC alongside accuracy.</span></div>
+                <div class="project-case-point"><strong>Product layer</strong><span>Exposed five Flask REST endpoints and persisted auto-severity alerts for a dashboard with KPIs, activity trends, and a risk gauge.</span></div>
                 <div class="project-case-point"><strong>Interview focus</strong><span>Imbalanced evaluation, threshold tradeoffs, feature leakage, alert severity, API design, persistence choices, and monitoring after deployment.</span></div>
               </div>
               <div class="project-case-metrics" aria-label="ShieldAI project metrics">
                 <div class="project-metric"><strong>10K</strong><span>Transactions</span></div>
                 <div class="project-metric"><strong>3%</strong><span>Fraud rate</span></div>
-                <div class="project-metric"><strong>Synthetic</strong><span>Training data</span></div>
-                <div class="project-metric"><strong>6</strong><span>Flask endpoints</span></div>
+                <div class="project-metric"><strong>0.99</strong><span>ROC-AUC</span></div>
+                <div class="project-metric"><strong>5</strong><span>Flask endpoints</span></div>
               </div>
               <div class="project-case-flow" aria-label="ShieldAI data flow">
                 <span>Transaction features</span><b>→</b><span>Scaling + class weights</span><b>→</b><span>Random Forest</span><b>→</b><span>Severity rules</span><b>→</b><span>SQLite + dashboard</span>
@@ -2282,10 +2173,10 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             </details>
           </div>
           <div class="project-footer">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Scikit-learn</span>
             <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Random Forest</span>
             <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">Chart.js</span>
             <span class="tech-tag">JavaScript</span>
           </div>
         </div>
@@ -2305,14 +2196,14 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="preview-score">LLaMA-3.3</span>
           </div>
           <div class="project-body">
-            <div class="project-badge">🤖 Automation</div>
+            <div class="project-badge">⭐ Latest Build</div>
             <h3 class="project-name">AI AutoReply ChatBot</h3>
             <p class="project-desc">WhatsApp automation using LLaMA-3.3-70B via Groq API — context-aware Hinglish replies with full chat history injection.</p>
             <ul class="project-highlights">
               <li>Groq API (LLaMA-3.3-70B) with context-aware Hinglish tone control</li>
               <li>Regex-based sender detection for targeted contact replies</li>
               <li>End-to-end automation via PyAutoGUI and clipboard operations</li>
-              <li>System prompt sets a persona and tone for the generated replies</li>
+              <li>Multi-role prompt system with persona simulation</li>
             </ul>
             <div class="project-actions">
               
@@ -2345,13 +2236,13 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="project-preview-caption">Live dashboard preview</span>
           </div>
           <div class="project-body">
-            <div class="project-badge progress-badge"><span class="status-dot" aria-hidden="true"></span> In Progress</div>
+            <div class="project-badge">🟢 Live on Render</div>
             <h3 class="project-name">TaskPilot</h3>
-            <p class="project-desc">Built a full-stack Kanban workspace featuring REST APIs, JWT authentication, role-based access control, and dashboard analytics.</p>
+            <p class="project-desc">Full-stack project & task management web app with role-based access, Kanban board, JWT auth, and real-time analytics.</p>
             <ul class="project-highlights">
               <li>Express.js + PostgreSQL REST API for projects, tasks, and activity feeds</li>
               <li>Role-based access control with JWT authentication</li>
-              <li>Visual Kanban board and analytics dashboard</li>
+              <li>Visual Kanban board and real-time analytics dashboard</li>
               <li>Production deployment on Render with secure environment config</li>
             </ul>
             <div class="project-actions">
@@ -2366,6 +2257,45 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="tech-tag">PostgreSQL</span>
             <span class="tech-tag">JWT</span>
             <span class="tech-tag">Vanilla JS</span>
+          </div>
+        </div>
+
+        <!-- Sales Forecasting -->
+        <div class="project-card reveal reveal-delay-3" hidden>
+          <div class="project-header">
+            <div class="project-icon">📈</div>
+            <div class="project-links">
+              <a href="https://github.com/ashutosh8950/Sales-Forecasting-Api" target="_blank" rel="noopener noreferrer" class="project-link" title="GitHub">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-preview" role="img" aria-label="Preview mockup for Automated Sales Forecasting API">
+            <span class="preview-label">Forecast API</span>
+            <span class="preview-score">RMSE Model Pick</span>
+          </div>
+          <div class="project-body">
+            <div class="project-badge">📂 GitHub</div>
+            <h3 class="project-name">Automated Sales Forecasting API</h3>
+            <p class="project-desc">Intelligent forecasting pipeline that auto-selects the best model (XGBoost/Prophet/SARIMA) based on RMSE evaluation.</p>
+            <ul class="project-highlights">
+              <li>Dynamic model selection: XGBoost, Prophet, or SARIMA by RMSE</li>
+              <li>Automated data cleaning, weekly resampling & feature engineering</li>
+              <li>Scalable FastAPI REST API with interactive Swagger UI</li>
+              <li>Joblib serialization for efficient per-state model inference</li>
+            </ul>
+            <div class="project-actions">
+              
+              <a href="https://github.com/ashutosh8950/Sales-Forecasting-Api" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open GitHub repository for Automated Sales Forecasting API">💻 GitHub</a>
+              
+            </div>
+          </div>
+          <div class="project-footer">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">XGBoost</span>
+            <span class="tech-tag">Prophet</span>
+            <span class="tech-tag">SARIMA</span>
+            <span class="tech-tag">FastAPI</span>
           </div>
         </div>
 
@@ -2419,19 +2349,19 @@ Open to Applied ML / Computer Vision / AI Engineer roles
   <!-- SOCIAL PROOF -->
   <section id="proof">
     <div class="container">
-<div class="section-eyebrow reveal">Proof of Work</div>
-<h2 class="section-title reveal">STATS &amp; ACHIEVEMENTS</h2>
+      <div class="section-eyebrow reveal">Proof of Work</div>
+      <h2 class="section-title reveal">Consistency, code, and credibility.</h2>
       <div class="proof-grid">
 
         <!-- Card 1: GitHub Activity -->
         <div class="proof-card reveal reveal-delay-1">
           <h3>GitHub Activity</h3>
-          <p><span id="gh-repo-count">9</span> public repositories, 5 highlighted projects — built and shipped.</p>
-          <p class="proof-updated">Snapshot: October 2026</p>
+          <p>18 public repositories, 6 highlighted projects — built and shipped.</p>
+          <p class="proof-updated">Snapshot: September 2026</p>
           <div class="gh-stats">
-            <div class="gh-stat"><span class="gh-stat-val" id="gh-public-repos">9</span><span class="gh-stat-lbl">Public Repos</span></div>
-            <div class="gh-stat"><span class="gh-stat-val">3</span><span class="gh-stat-lbl">Certifications</span></div>
-            <div class="gh-stat"><span class="gh-stat-val">5</span><span class="gh-stat-lbl">Featured Projects</span></div>
+            <div class="gh-stat"><span class="gh-stat-val">18</span><span class="gh-stat-lbl">Public Repos</span></div>
+            <div class="gh-stat"><span class="gh-stat-val">10</span><span class="gh-stat-lbl">Stars Earned</span></div>
+            <div class="gh-stat"><span class="gh-stat-val">6</span><span class="gh-stat-lbl">Featured Projects</span></div>
             <div class="gh-stat"><span class="gh-stat-val">4</span><span class="gh-stat-lbl">Live Demos</span></div>
           </div>
           <div class="gh-recent-wrap">
@@ -2446,10 +2376,10 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           </div>
           <div class="gh-graph-wrap">
             <img class="github-graph"
-              src="https://ghchart.rshah.org/3BE8FF/ashutosh8950"
+                 src="https://ghchart.rshah.org/7C3AED/ashutosh8950"
                  alt="Ashutosh Gupta GitHub contribution graph"
                  loading="lazy" />
-              <div id="gh-contrib" class="gh-contrib" hidden></div>
+            <div id="gh-contrib" class="gh-contrib" hidden></div>
           </div>
           <a class="gh-activity-link" href="https://github.com/ashutosh8950" target="_blank" rel="noopener noreferrer">View full activity on GitHub →</a>
         </div>
@@ -2653,10 +2583,10 @@ Open to Applied ML / Computer Vision / AI Engineer roles
         mouseInfluence: isMobile ? 0 : 180,
         baseSpeed: 0.35,
         colors: {
-          particleCyan:   'rgba(0,240,255,',
-          particleViolet: 'rgba(160,160,176,',
-          lineCyan:       'rgba(0,240,255,',
-          lineViolet:     'rgba(160,160,176,',
+          particleCyan:   'rgba(168,85,247,',
+          particleViolet: 'rgba(124,58,237,',
+          lineCyan:       'rgba(168,85,247,',
+          lineViolet:     'rgba(124,58,237,',
         },
         pulseNodes: 6,   // nodes that glow/pulse
       };
@@ -3087,8 +3017,8 @@ Open to Applied ML / Computer Vision / AI Engineer roles
           const rect = card.getBoundingClientRect();
           const x = (e.clientX - rect.left) / rect.width;
           const y = (e.clientY - rect.top) / rect.height;
-      card.style.setProperty('--tilt-x', `${(0.5 - y) * 8}deg`);
-      card.style.setProperty('--tilt-y', `${(x - 0.5) * 8}deg`);
+          card.style.setProperty('--tilt-x', `${(0.5 - y) * 5}deg`);
+          card.style.setProperty('--tilt-y', `${(x - 0.5) * 5}deg`);
         });
         card.addEventListener('pointerleave', () => {
           card.style.setProperty('--tilt-x', '0deg');
@@ -3259,7 +3189,7 @@ Open to Applied ML / Computer Vision / AI Engineer roles
       document.body.classList.add('cursor-click');
       setTimeout(() => document.body.classList.remove('cursor-click'), 160);
 
-      const mainColor = isHover ? '#FFFFFF' : '#00F0FF';
+      const mainColor = isHover ? '#E879F9' : '#A855F7';
       pulses.push({ x: mx, y: my, r: 0, alpha: 0.85, color: mainColor, speed: 4.8, max: isHover ? 86 : 68 });
 
       const nodeCount = isHover ? 10 : 7;
@@ -3355,215 +3285,82 @@ Open to Applied ML / Computer Vision / AI Engineer roles
 
     animate();
   })();
-
-  (function () {
-    const cacheKey = 'github-activity-cache';
-    const cacheDuration = 30 * 60 * 1000;
-
-    function normalizeActivity(user, repos) {
-      if (!user || !Number.isInteger(user.public_repos) || !Array.isArray(repos)) throw new Error();
-      const recent = repos.filter(function (repo) {
-        if (!repo || typeof repo.name !== 'string' || typeof repo.fork !== 'boolean' || typeof repo.pushed_at !== 'string' || Number.isNaN(Date.parse(repo.pushed_at))) throw new Error();
-        return !repo.fork && repo.name !== 'ashutosh8950';
-      }).sort(function (first, second) {
-        return Date.parse(second.pushed_at) - Date.parse(first.pushed_at);
-      }).slice(0, 5);
-      if (recent.length !== 5) throw new Error();
-      return { publicRepos: user.public_repos, repos: recent };
-    }
-
-    function relativeTime(pushedAt) {
-      const days = Math.max(0, Math.floor((Date.now() - Date.parse(pushedAt)) / 86400000));
-      if (days === 0) return 'today';
-      if (days < 7) return days + ' day' + (days === 1 ? '' : 's') + ' ago';
-      const weeks = Math.floor(days / 7);
-      if (weeks < 5) return weeks + ' week' + (weeks === 1 ? '' : 's') + ' ago';
-      const months = Math.floor(days / 30);
-      if (months < 12) return months + ' month' + (months === 1 ? '' : 's') + ' ago';
-      const years = Math.floor(days / 365);
-      return years + ' year' + (years === 1 ? '' : 's') + ' ago';
-    }
-
-    async function updateActivity() {
-      try {
-        const now = Date.now();
-        let activity = null;
-        const cachedValue = sessionStorage.getItem(cacheKey);
-        if (cachedValue) {
-          try {
-            const cached = JSON.parse(cachedValue);
-            if (Number.isFinite(cached.cachedAt) && now - cached.cachedAt >= 0 && now - cached.cachedAt < cacheDuration) {
-              activity = normalizeActivity(cached.user, cached.repos);
-            }
-          } catch (error) { }
-        }
-
-        if (!activity) {
-          const responses = await Promise.all([
-            fetch('https://api.github.com/users/ashutosh8950'),
-            fetch('https://api.github.com/users/ashutosh8950/repos?sort=pushed&direction=desc&per_page=10&type=owner')
-          ]);
-          if (responses.some(function (response) { return !response.ok; })) return;
-          const data = await Promise.all(responses.map(function (response) { return response.json(); }));
-          activity = normalizeActivity(data[0], data[1]);
-          sessionStorage.setItem(cacheKey, JSON.stringify({ cachedAt: now, user: data[0], repos: data[1] }));
-        }
-
-        const publicRepos = document.getElementById('gh-public-repos');
-        const repoCount = document.getElementById('gh-repo-count');
-        const recentList = document.getElementById('gh-recent');
-        const snapshot = document.querySelector('.proof-updated');
-        if (!publicRepos || !repoCount || !recentList || !snapshot) return;
-
-        const listItems = document.createDocumentFragment();
-        activity.repos.forEach(function (repo) {
-          const item = document.createElement('li');
-          const link = document.createElement('a');
-          const time = document.createElement('span');
-          link.href = 'https://github.com/ashutosh8950/' + encodeURIComponent(repo.name);
-          link.target = '_blank';
-          link.rel = 'noopener noreferrer';
-          link.textContent = repo.name;
-          time.textContent = relativeTime(repo.pushed_at);
-          item.append(link, time);
-          listItems.append(item);
-        });
-
-        const latestMonth = new Date(Date.parse(activity.repos[0].pushed_at)).toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
-        publicRepos.textContent = activity.publicRepos;
-        repoCount.textContent = activity.publicRepos;
-        recentList.replaceChildren(listItems);
-        snapshot.textContent = 'Snapshot: ' + latestMonth;
-      } catch (error) { }
-    }
-
-    updateActivity();
-  })();
   </script>
   <script>
     (function () {
-      const cacheKey = 'github-contrib-cache';
-      const cacheDuration = 30 * 60 * 1000;
+      const endpoint = 'https://github-contributions-api.jogruber.de/v4/ashutosh8950?y=last';
+      const container = document.getElementById('gh-contrib');
+      const image = document.querySelector('.gh-graph-wrap .github-graph');
+      if (!container || !image) return;
 
-      function isValidData(data) {
-        return Boolean(data && Array.isArray(data.contributions) && data.contributions.length >= 300 && data.contributions.every(function (entry) {
-          if (!entry || typeof entry.date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(entry.date) || !Number.isInteger(entry.count) || entry.count < 0 || !Number.isInteger(entry.level) || entry.level < 0 || entry.level > 4) return false;
+      function render(data) {
+        if (!data || !Array.isArray(data.contributions) || data.contributions.length < 300) return;
+        const contributions = data.contributions;
+        const firstDate = new Date(contributions[0].date + 'T00:00:00Z');
+        const firstDay = firstDate.getUTCDay();
+        const columns = Math.ceil((firstDay + contributions.length) / 7);
+        const content = document.createDocumentFragment();
+
+        const total = document.createElement('div');
+        total.className = 'gh-contrib-total';
+        total.textContent = (data.total && data.total.lastYear || 0) + ' public contributions in the last year';
+        content.appendChild(total);
+
+        const months = document.createElement('div');
+        months.className = 'gh-contrib-months';
+        months.style.setProperty('--cols', columns);
+        const labels = new Array(columns).fill('');
+        let previousMonth = '';
+        let previousColumn = -4;
+        contributions.forEach(function (entry, index) {
+          const month = entry.date.slice(0, 7);
+          const column = Math.floor((firstDay + index) / 7);
+          if (month !== previousMonth && column - previousColumn >= 3) {
+            labels[column] = new Date(entry.date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' });
+            previousColumn = column;
+          }
+          previousMonth = month;
+        });
+        labels.forEach(function (label) { const span = document.createElement('span'); span.textContent = label; months.appendChild(span); });
+        content.appendChild(months);
+
+        const grid = document.createElement('div');
+        grid.className = 'gh-contrib-grid';
+        grid.style.setProperty('--cols', columns);
+        for (let index = 0; index < firstDay; index++) {
+          const pad = document.createElement('span');
+          pad.className = 'gh-contrib-cell gh-l0 gh-contrib-pad';
+          grid.appendChild(pad);
+        }
+        contributions.forEach(function (entry) {
+          const cell = document.createElement('span');
           const date = new Date(entry.date + 'T00:00:00Z');
-          return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === entry.date;
-        }));
+          cell.className = 'gh-contrib-cell gh-l' + entry.level;
+          cell.title = entry.count + ' contribution' + (entry.count === 1 ? '' : 's') + ' on ' + date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+          grid.appendChild(cell);
+        });
+        content.appendChild(grid);
+
+        const legend = document.createElement('div');
+        legend.className = 'gh-contrib-legend';
+        ['Less', 0, 1, 2, 3, 4, 'More'].forEach(function (item) {
+          const node = document.createElement('span');
+          if (typeof item === 'number') node.className = 'gh-contrib-cell gh-l' + item;
+          else node.textContent = item;
+          legend.appendChild(node);
+        });
+        content.appendChild(legend);
+
+        container.style.setProperty('--cols', columns);
+        container.replaceChildren(content);
+        container.setAttribute('role', 'img');
+        container.setAttribute('aria-label', 'GitHub contribution graph');
+        container.hidden = false;
+        image.style.display = 'none';
+        image.parentElement.classList.add('gh-has-contrib');
       }
 
-      async function renderContributions() {
-        try {
-          let data = null;
-          const now = Date.now();
-          const cachedValue = sessionStorage.getItem(cacheKey);
-          if (cachedValue) {
-            try {
-              const cached = JSON.parse(cachedValue);
-              const age = now - cached.cachedAt;
-              if (Number.isFinite(cached.cachedAt) && age >= 0 && age < cacheDuration && isValidData(cached.data)) data = cached.data;
-            } catch (error) { }
-          }
-
-          if (!data) {
-            const response = await fetch('https://github-contributions-api.jogruber.de/v4/ashutosh8950?y=last');
-            if (!response.ok) return;
-            const fetchedData = await response.json();
-            if (!isValidData(fetchedData)) return;
-            data = fetchedData;
-            sessionStorage.setItem(cacheKey, JSON.stringify({ cachedAt: now, data: data }));
-          }
-
-          const container = document.getElementById('gh-contrib');
-          const image = document.querySelector('.gh-graph-wrap .github-graph');
-          if (!container || !image) return;
-
-          const contributions = data.contributions;
-          const firstDate = new Date(contributions[0].date + 'T00:00:00Z');
-          const firstDay = firstDate.getUTCDay();
-          const columns = Math.ceil((firstDay + contributions.length) / 7);
-          const content = document.createElement('div');
-
-          if (data.total && Number.isInteger(data.total.lastYear) && data.total.lastYear >= 0) {
-            const total = document.createElement('div');
-            total.setAttribute('class', 'gh-contrib-total');
-            total.textContent = data.total.lastYear + ' public contribution' + (data.total.lastYear === 1 ? '' : 's') + ' in the last year';
-            content.appendChild(total);
-          }
-
-          const monthRow = document.createElement('div');
-          monthRow.setAttribute('class', 'gh-contrib-months');
-          const monthLabels = new Array(columns).fill('');
-          let previousMonth = '';
-          let previousLabelColumn = -4;
-          contributions.forEach(function (entry, index) {
-            const date = new Date(entry.date + 'T00:00:00Z');
-            const month = entry.date.slice(0, 7);
-            const column = Math.floor((firstDay + index) / 7);
-            if (month !== previousMonth) {
-              if (column - previousLabelColumn >= 3) {
-                monthLabels[column] = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' });
-                previousLabelColumn = column;
-              }
-              previousMonth = month;
-            }
-          });
-          monthLabels.forEach(function (label) {
-            const month = document.createElement('span');
-            month.textContent = label;
-            monthRow.appendChild(month);
-          });
-          content.appendChild(monthRow);
-
-          const grid = document.createElement('div');
-          grid.setAttribute('class', 'gh-contrib-grid');
-          for (let index = 0; index < firstDay; index++) {
-            const paddingCell = document.createElement('span');
-            paddingCell.setAttribute('class', 'gh-contrib-cell gh-l0 gh-contrib-pad');
-            paddingCell.setAttribute('aria-hidden', 'true');
-            grid.appendChild(paddingCell);
-          }
-          contributions.forEach(function (entry) {
-            const cell = document.createElement('span');
-            const date = new Date(entry.date + 'T00:00:00Z');
-            const dateLabel = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-            let title = 'No contributions on ' + dateLabel;
-            if (entry.count > 0) title = entry.count + ' contribution' + (entry.count === 1 ? '' : 's') + ' on ' + dateLabel;
-            cell.setAttribute('class', 'gh-contrib-cell gh-l' + entry.level);
-            cell.setAttribute('aria-hidden', 'true');
-            cell.setAttribute('title', title);
-            grid.appendChild(cell);
-          });
-          content.appendChild(grid);
-
-          const legend = document.createElement('div');
-          legend.setAttribute('class', 'gh-contrib-legend');
-          const less = document.createElement('span');
-          less.textContent = 'Less';
-          legend.appendChild(less);
-          for (let level = 0; level <= 4; level++) {
-            const legendCell = document.createElement('span');
-            legendCell.setAttribute('class', 'gh-contrib-cell gh-l' + level);
-            legendCell.setAttribute('aria-hidden', 'true');
-            legend.appendChild(legendCell);
-          }
-          const more = document.createElement('span');
-          more.textContent = 'More';
-          legend.appendChild(more);
-          content.appendChild(legend);
-
-          container.style.setProperty('--cols', columns);
-          container.replaceChildren(...content.childNodes);
-          container.setAttribute('role', 'img');
-          container.setAttribute('aria-label', 'GitHub contribution graph');
-          container.removeAttribute('hidden');
-          image.style.display = 'none';
-          image.parentElement.classList.add('gh-has-contrib');
-        } catch (error) { }
-      }
-
-      renderContributions();
+      fetch(endpoint).then(function (response) { return response.ok ? response.json() : null; }).then(render).catch(function () { /* static graph remains as fallback */ });
     })();
   </script>
 </body>
