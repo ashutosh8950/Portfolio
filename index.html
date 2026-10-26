@@ -2009,19 +2009,19 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             </div>
           </div>
           <div class="project-preview image-preview">
-            <img src="assets/resume-screener-dashboard.png" alt="AI Resume Screener dashboard showing resume and job description input panels, weighted scoring methods, and analysis controls in dark mode" width="1920" height="881" loading="lazy" decoding="async" />
+            <img src="assets/resume-screener-dashboard.png" alt="AI Resume Screener dashboard with animated score tiles, a decision ring, and requirement evidence tables" width="1920" height="1080" loading="lazy" decoding="async" />
             <span class="project-preview-caption">Live dashboard preview</span>
           </div>
           <div class="project-body">
             <div class="project-badge">🟢 Live on Render</div>
             <h3 class="project-name">Resume Screener</h3>
-            <p class="project-desc">Local semantic resume ↔ job-description matcher with requirement evidence, skill-gap analysis, optional Gemini suggestions, and batch workflows.</p>
+            <p class="project-desc">Deployed resume ↔ job-description matcher with explainable requirement evidence, skill-gap analysis, optional Gemini suggestions, and three ranking modes.</p>
             <ul class="project-highlights">
-              <li>FastEmbed/ONNX semantic embeddings combined with TF-IDF, keyword overlap, and technical skill coverage</li>
-              <li>Validated text-based PDF extraction with pypdf, upload-size limits, and page-count limits</li>
-              <li>Requirement-level evidence tables classify strong, partial, and gap matches with rationale</li>
-              <li>Streamlit + Plotly dashboard supports single analysis, 2–6 job batch ranking, and bulk comparison of up to 10 resumes with protected CSV export</li>
-              <li>Memory-aware fallback scoring keeps the Render deployment resilient when local embeddings are unavailable; optional Gemini suggestions add structured improvement guidance</li>
+              <li>55% semantic FastEmbed/ONNX MiniLM, 30% technical skill coverage, 7.5% keyword, and 7.5% TF-IDF scoring</li>
+              <li>Strong, Partial, and Gap evidence tables show the matched resume text for each requirement, with rule-based suggestions and ATS tips</li>
+              <li>Single Analysis, Batch Mode for 2–6 jobs, and Bulk Resumes for up to 10 PDFs with ranked leaderboard and formula-safe CSV export</li>
+              <li>A 192 MB memory guard falls back to skill/keyword/TF-IDF scoring for the Render 512 MB free tier; optional Gemini suggestions remain available</li>
+              <li>Dark purple-accent UI with animated score ring and tiles, evidence score bars, scanning spinner, and cleaned JD bullet glyphs; 83 passing tests plus GitHub Actions CI</li>
             </ul>
             <div class="project-actions">
               <a href="https://ai-resume-screener-w6h3.onrender.com" target="_blank" rel="noopener noreferrer" class="project-action" aria-label="Open live demo for Resume Screener">🟢 Live Demo</a>
@@ -2032,9 +2032,9 @@ Open to Applied ML / Computer Vision / AI Engineer roles
               <summary>Read technical case study</summary>
               <div class="project-case-grid">
                 <div class="project-case-point"><strong>Problem</strong><span>Recruiters and applicants need a faster way to compare resume content with a job description and identify meaningful gaps.</span></div>
-                <div class="project-case-point"><strong>Approach</strong><span>Combines semantic embeddings, TF-IDF, keyword overlap, and technical skill coverage into a weighted matching workflow with requirement filtering, PDF extraction, and dashboard analytics.</span></div>
-                <div class="project-case-point"><strong>AI layer</strong><span>Rule-based suggestions work by default; an optional Gemini integration can enhance the structured advice after the matching signals and evidence gaps are calculated.</span></div>
-                <div class="project-case-point"><strong>Interview focus</strong><span>Similarity tradeoffs, feature weighting, PDF parsing failures, evaluation design, prompt reliability, and explainable recommendations.</span></div>
+                <div class="project-case-point"><strong>Approach</strong><span>Combines semantic requirement coverage, technical skill coverage, keyword overlap, and TF-IDF into an explainable weighted workflow with PDF extraction and evidence tables. Batch ranking uses unrounded overall score, then skill coverage, then semantic score.</span></div>
+                <div class="project-case-point"><strong>Model strategy</strong><span>FastEmbed's ONNX MiniLM path is warmed before caching and reloads/retries once after a cold-start failure. A 192 MB guard switches to 50% skill, 25% keyword, and 25% TF-IDF fallback scoring when embeddings are unsafe on Render.</span></div>
+                <div class="project-case-point"><strong>Interview focus</strong><span>Explainable evidence, memory-constrained deployment, cold-start recovery, tie-break ranking, PDF parsing, CSV formula injection, and optional Gemini reliability.</span></div>
               </div>
             </details>
           </div>
@@ -2047,7 +2047,6 @@ Open to Applied ML / Computer Vision / AI Engineer roles
             <span class="tech-tag">pandas</span>
             <span class="tech-tag">Streamlit</span>
             <span class="tech-tag">Plotly</span>
-            <span class="tech-tag">requests</span>
             <span class="tech-tag">Gemini optional</span>
             <span class="tech-tag">pytest</span>
             <span class="tech-tag">Render</span>
