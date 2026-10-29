@@ -570,7 +570,13 @@
       margin-bottom: 1.2rem;
     }
     .detail-icon {
-      font-size: 1.2rem;
+      min-width: 1.25rem;
+      color: var(--cyan);
+      font-family: var(--mono);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
       margin-top: 2px;
       flex-shrink: 0;
     }
@@ -939,7 +945,7 @@
       transition: all 0.2s;
     }
     .contact-link:hover { border-color: var(--cyan); color: var(--cyan); background: var(--cyan-dim); }
-    .contact-link-icon { font-size: 1.1rem; width: 24px; text-align: center; }
+    .contact-link-icon { color: var(--cyan); font-family: var(--mono); font-size: 0.95rem; font-weight: 700; width: 24px; text-align: center; }
     .contact-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
     /* ── FOOTER ── */
@@ -1463,7 +1469,7 @@
     body.cursor-hover #cursor-ring {
       width: 58px;
       height: 58px;
-      border-color: rgba(255,122,134,0.78);
+      border-color: var(--cyan);
     }
 
     body.cursor-hover #cursor-ring::before,
@@ -1486,7 +1492,7 @@
     body.cursor-hover .cursor-label {
       opacity: 1;
       color: #E879F9;
-      text-shadow: 0 0 12px rgba(255,122,134,0.72);
+      text-shadow: 0 0 12px var(--cyan-glow);
     }
 
     body.cursor-click #cursor-ring {
@@ -1668,35 +1674,35 @@ Open to Applied ML / Computer Vision / AI Engineer roles
         <div class="about-card reveal reveal-delay-2">
           <div class="about-card-title">Quick Info</div>
           <div class="detail-item">
-            <span class="detail-icon">🎓</span>
+            <span class="detail-icon" aria-hidden="true">◇</span>
             <div>
               <div class="detail-label">University</div>
               <div class="detail-value">Thapar Institute of Engineering & Technology</div>
             </div>
           </div>
           <div class="detail-item">
-            <span class="detail-icon">📍</span>
+            <span class="detail-icon" aria-hidden="true">⌖</span>
             <div>
               <div class="detail-label">Location</div>
               <div class="detail-value">India</div>
             </div>
           </div>
           <div class="detail-item">
-            <span class="detail-icon">📧</span>
+            <span class="detail-icon" aria-hidden="true">@</span>
             <div>
               <div class="detail-label">Email</div>
               <div class="detail-value">guptaashutosh8950@gmail.com</div>
             </div>
           </div>
           <div class="detail-item">
-            <span class="detail-icon">📱</span>
+            <span class="detail-icon" aria-hidden="true">#</span>
             <div>
               <div class="detail-label">Phone</div>
               <div class="detail-value">+91 8950208114</div>
             </div>
           </div>
           <div class="detail-item">
-            <span class="detail-icon">💼</span>
+            <span class="detail-icon" aria-hidden="true">↗</span>
             <div>
               <div class="detail-label">Open To</div>
               <div class="detail-value">Applied ML Engineer · Computer Vision Engineer · AI/ML Engineer · Python Backend</div>
@@ -2523,19 +2529,19 @@ Open to Applied ML / Computer Vision / AI Engineer roles
 
           <div class="contact-links">
             <a href="mailto:guptaashutosh8950@gmail.com" class="contact-link">
-              <span class="contact-link-icon">✉️</span>
+              <span class="contact-link-icon" aria-hidden="true">@</span>
               guptaashutosh8950@gmail.com
             </a>
             <a href="tel:+918950208114" class="contact-link">
-              <span class="contact-link-icon">📱</span>
+              <span class="contact-link-icon" aria-hidden="true">#</span>
               +91 8950208114
             </a>
             <a href="https://www.linkedin.com/in/im-ashutosh-gupta/" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <span class="contact-link-icon">💼</span>
+              <span class="contact-link-icon" aria-hidden="true">in</span>
               linkedin.com/in/im-ashutosh-gupta
             </a>
             <a href="https://github.com/ashutosh8950" target="_blank" rel="noopener noreferrer" class="contact-link">
-              <span class="contact-link-icon">🐙</span>
+              <span class="contact-link-icon" aria-hidden="true">GH</span>
               github.com/ashutosh8950
             </a>
           </div>
